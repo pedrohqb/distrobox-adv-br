@@ -29,4 +29,4 @@ init_hooks="sudo apt install -y ${HOME}/Downloads/setup-deb-64.deb ${HOME}/Downl
 init_hooks="rm ${HOME}/Downloads/setup-deb-64.deb ${HOME}/Downloads/webpki-chrome-64-deb.deb"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox tokenadmin okular pje-office"
+exported_apps="firefox tokenadmin okular pjeoffice-pro"

@@ -12,8 +12,7 @@ Estão incluídos:
    
 6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-7) Firefox-OSR, utilizado para acessar sítios de internet, e, para este uso, valem diretamente de certificação digital ou 
-
+7) Firefox-OSR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ---
 
@@ -21,10 +20,10 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid, necessário para que seu sistema possa acessar o token.
 
-  Fedora Workstation e KDE Plasma:
+Fedora Workstation e KDE Plasma:
 
 ```bash
-sudo dnf install distrobox podman
+sudo dnf install distrobox
 ```
 Arch Linux:
   
@@ -39,7 +38,7 @@ sudo zypper in distrobox podman pcsc-ccid
 
 **OBS:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
 
-2. Habilitar o pcsc-lite no sistema:
+2. Habilitar o pcsc-lite no sistema caso já não esteja:
    
 ```bash
 sudo systemctl enable --now pcscd.service

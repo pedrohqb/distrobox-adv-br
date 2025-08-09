@@ -51,3 +51,12 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 ```
 
 **OBS:** Também é possível instalar graficamente o distrobox-adv-br mediante DistroShelf, disponível no [`Flathub`](https://flathub.org/apps/com.ranfdev.DistroShelf).
+
+
+---
+
+## Uso
+
+Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (Distrobox-adv-br)**.
+
+Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Para tanto, basta iniciar o aplicativo **Utilitário de administração de token**, acessar o menu **Integração** e selecionar **Instalar o SafeSign no Firefox**.

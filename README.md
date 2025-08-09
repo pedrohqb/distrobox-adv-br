@@ -1,1 +1,54 @@
-Para instalar: $ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
+# Distrobox-adv-br
+
+Trata-se de arquivo assemble para criar contêiner do Debian 13 (trixie) via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em qualquer distribuição de Linux recente. 
+
+Estão incluídos:
+
+1) Driver denominado Safesign necessário para uso do token GD Burti, atualmente o mais utilizado pela advocacia;
+
+2) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
+   
+4) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
+   
+6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
+
+7) Firefox-OSR, utilizado para acessar sítios de internet, e, para este uso, valem diretamente de certificação digital ou 
+
+
+---
+
+## Instalação
+
+1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid, necessário para que seu sistema possa acessar o token.
+
+  Fedora Workstation e KDE Plasma:
+
+```bash
+sudo dnf install distrobox podman
+```
+Arch Linux:
+  
+```bash
+pacman -S distrobox podman pcsclite ccid
+```
+
+openSUSE:
+```bash
+sudo zypper in distrobox podman pcsc-ccid
+```
+
+**OBS:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
+
+2. Habilitar o pcsc-lite no sistema:
+   
+```bash
+sudo systemctl enable --now pcscd.service
+```
+
+3. Instalar o distrobox-adv-br mediante o comando abaixo:
+
+```bash
+distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
+```
+
+**OBS:** Também é possível instalar graficamente o distrobox-adv-br mediante DistroShelf, disponível no [`Flathub`](https://flathub.org/apps/com.ranfdev.DistroShelf).

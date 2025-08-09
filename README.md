@@ -18,7 +18,7 @@ Estão incluídos:
 
 ## Instalação
 
-1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid, necessário para que seu sistema possa acessar o token.
+1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
 Fedora Workstation e KDE Plasma:
 

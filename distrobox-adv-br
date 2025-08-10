@@ -20,7 +20,7 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Download
 # Instalar softplan-websigner
 init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb && mv ${HOME}/Downloads/webpki-chrome-64-deb ${HOME}/Downloads/webpki-chrome-64-deb.deb && apt install -y ${HOME}/Downloads/webpki-chrome-64-deb.deb && rm ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
 
-# Assegurar para não rodar novamente a instalação dos pacotes adicionais
+# Assegurar que a instalação dos pacotes adicionais não se repita
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes

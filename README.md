@@ -20,10 +20,16 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
+Debian e Ubuntu:
+
+```bash
+sudo apt install pcsc-lite libccid distrobox podman
+```
+
 Fedora Workstation e KDE Plasma:
 
 ```bash
-sudo dnf install distrobox
+sudo dnf install distrobox podman
 ```
 Arch Linux:
   
@@ -50,8 +56,7 @@ sudo systemctl enable --now pcscd.service
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
 ```
 
-**OBS:** Também é possível instalar graficamente o distrobox-adv-br mediante DistroShelf, disponível no [`Flathub`](https://flathub.org/apps/com.ranfdev.DistroShelf).
-
+**OBS:** Também é possível instalar graficamente o distrobox-adv-br mediante DistroShelf, disponível no [`Flathub`](https://flathub.org/apps/com.ranfdev.DistroShelf), ou mediante [`Linux Toys`](https://github.com/psygreg/linuxtoys).
 
 ---
 
@@ -60,3 +65,16 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**.
 
 Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Para tanto, basta iniciar o aplicativo **Utilitário de administração de token**, acessar o menu **Integração** e selecionar **Instalar o SafeSign no Firefox**.
+
+---
+
+## A fazer:
+
++ Adicionar suporte ao SafeNet, aparentemente o segundo mais utilizado token por advogados no Brasil; e
++ Automatizar a instalação do certificado digital como dispositivo de segurança no Firefox (possivelmente mediante uso do p11-kit).
+
+---
+
+## Suporte
+
+Havendo qualquer dificuldade no uso de ferramenta, forneça um issue e peça suporte no grupo oficial no [`Telegram`](https://t.me/advogados_linux).

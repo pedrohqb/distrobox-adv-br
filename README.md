@@ -23,7 +23,7 @@ Estão incluídos:
 Debian e Ubuntu:
 
 ```bash
-sudo apt install pcsc-lite libccid distrobox podman
+sudo apt install pcscd libccid distrobox podman
 ```
 
 Fedora Workstation e KDE Plasma:

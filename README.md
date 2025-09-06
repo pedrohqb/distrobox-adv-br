@@ -68,7 +68,7 @@ Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Pa
 
 ---
 
-## A fazer:
+## A fazer
 
 + Adicionar suporte ao SafeNet, aparentemente o segundo mais utilizado token por advogados no Brasil; e
 + Automatizar a instalação do certificado digital como dispositivo de segurança no Firefox (possivelmente mediante uso do p11-kit).

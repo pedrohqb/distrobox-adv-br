@@ -4,7 +4,7 @@ image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr okular"
+additional_packages="firefox-esr okular xterm"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 
@@ -19,6 +19,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Download
 
 # Instalar softplan-websigner
 init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb && mv ${HOME}/Downloads/webpki-chrome-64-deb ${HOME}/Downloads/webpki-chrome-64-deb.deb && apt install -y ${HOME}/Downloads/webpki-chrome-64-deb.deb && rm ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
+
+# Instalar PJeCalc (não exportará nenhum executável)
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pjecalc-instalador-deb/releases/download/1.25.04.17-1/pjecalc-instalador-1.25.04.17.deb && apt install -y ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb && rm ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb; fi"
 
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts; fi"

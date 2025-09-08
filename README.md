@@ -12,7 +12,9 @@ Estão incluídos:
    
 6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-7) Firefox-OSR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+7) Firefox-OSR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc; e
+
+8) PJeCalc, utilizado para cálculos trabalhistas no sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ.
 
 ---
 
@@ -65,6 +67,12 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**.
 
 Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Para tanto, basta iniciar o aplicativo **Utilitário de administração de token**, acessar o menu **Integração** e selecionar **Instalar o SafeSign no Firefox**.
+
+Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
+
+```bash
+distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh && distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-instalar-remover.sh
+```
 
 ---
 

@@ -5,10 +5,12 @@ Trata-se de arquivo assemble para criar contêiner do Debian 13 (trixie) via dis
 Estão incluídos:
 
 1) Driver denominado Safesign necessário para uso do token GD Burti, atualmente o mais utilizado pela advocacia;
-
-2) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    
-4) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
+3) Driver denominado SafeNet necessário para uso do token SafeNet 5100, o segundo mais utilizado pela advocacia;
+
+4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
+   
+5) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
 6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
@@ -67,6 +69,8 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**.
 
 Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Para tanto, basta iniciar o aplicativo **Utilitário de administração de token**, acessar o menu **Integração** e selecionar **Instalar o SafeSign no Firefox**.
+
+Para habilitar o SafeNet pelo Firefox, basta abrir o navegador, ir em **Configurações**, pesquisar por **Dispositivos de segurança** e nele clicar. Uma vez aberto o Gerenciador de dispositivos, clicar em **Carregar**, dar o nome ao módulo de "SafeNet", dar o nome do arquivo do módulo de "/lib/libeToken.so", sem aspas, e, ao final, pressionar **Ok**.
 
 Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
 

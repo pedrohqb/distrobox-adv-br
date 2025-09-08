@@ -5,14 +5,18 @@ Trata-se de arquivo assemble para criar contêiner do Debian 13 (trixie) via dis
 Estão incluídos:
 
 1) Driver denominado Safesign necessário para uso do token GD Burti, atualmente o mais utilizado pela advocacia;
-
-2) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    
-4) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
+3) Driver denominado SafeNet necessário para uso do token SafeNet 5100, o segundo mais utilizado pela advocacia;
+
+4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
+   
+5) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
 6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-7) Firefox-OSR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+7) Firefox-OSR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc; e
+
+8) PJeCalc, utilizado para cálculos trabalhistas no sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ.
 
 ---
 
@@ -23,7 +27,7 @@ Estão incluídos:
 Debian e Ubuntu:
 
 ```bash
-sudo apt install pcsc-lite libccid distrobox podman
+sudo apt install pcscd libccid distrobox podman
 ```
 
 Fedora Workstation e KDE Plasma:
@@ -66,12 +70,19 @@ Terminada a instalação, os aplicativos acima mencionados estarão disponíveis
 
 Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Para tanto, basta iniciar o aplicativo **Utilitário de administração de token**, acessar o menu **Integração** e selecionar **Instalar o SafeSign no Firefox**.
 
+Para habilitar o SafeNet pelo Firefox, basta abrir o navegador, ir em **Configurações**, pesquisar por **Dispositivos de segurança** e nele clicar. Uma vez aberto o Gerenciador de dispositivos, clicar em **Carregar**, dar o nome ao módulo de "SafeNet" (sem aspas), dar o nome do arquivo do módulo de "/lib/libeToken.so" (sem aspas), e, ao final, pressionar **Ok**.
+
+Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
+
+```bash
+distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh && distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-instalar-remover.sh
+```
+
 ---
 
-## A fazer:
+## A fazer
 
-+ Adicionar suporte ao SafeNet, aparentemente o segundo mais utilizado token por advogados no Brasil; e
-+ Automatizar a instalação do certificado digital como dispositivo de segurança no Firefox (possivelmente mediante uso do p11-kit).
++ Automatizar a instalação do certificado digital como dispositivo de segurança no Firefox.
 
 ---
 

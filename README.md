@@ -70,7 +70,7 @@ Terminada a instalação, os aplicativos acima mencionados estarão disponíveis
 
 Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Para tanto, basta iniciar o aplicativo **Utilitário de administração de token**, acessar o menu **Integração** e selecionar **Instalar o SafeSign no Firefox**.
 
-Para habilitar o SafeNet pelo Firefox, basta abrir o navegador, ir em **Configurações**, pesquisar por **Dispositivos de segurança** e nele clicar. Uma vez aberto o Gerenciador de dispositivos, clicar em **Carregar**, dar o nome ao módulo de "SafeNet", dar o nome do arquivo do módulo de "/lib/libeToken.so", sem aspas, e, ao final, pressionar **Ok**.
+Para habilitar o SafeNet pelo Firefox, basta abrir o navegador, ir em **Configurações**, pesquisar por **Dispositivos de segurança** e nele clicar. Uma vez aberto o Gerenciador de dispositivos, clicar em **Carregar**, dar o nome ao módulo de "SafeNet" (sem aspas), dar o nome do arquivo do módulo de "/lib/libeToken.so" (sem aspas), e, ao final, pressionar **Ok**.
 
 Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
 
@@ -82,8 +82,7 @@ distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh && d
 
 ## A fazer
 
-+ Adicionar suporte ao SafeNet, aparentemente o segundo mais utilizado token por advogados no Brasil; e
-+ Automatizar a instalação do certificado digital como dispositivo de segurança no Firefox (possivelmente mediante uso do p11-kit).
++ Automatizar a instalação do certificado digital como dispositivo de segurança no Firefox.
 
 ---
 

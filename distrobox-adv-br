@@ -4,7 +4,7 @@ image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr okular xterm"
+additional_packages="firefox-esr firefox-esr-l10n-pt-br okular xterm libnss3-tools"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 

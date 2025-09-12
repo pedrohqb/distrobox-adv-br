@@ -14,7 +14,7 @@ echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-es
 firefox --headless --new-tab about:blank &
 
 # Espera por 1 segundo para o Firefox criar os arquivos do perfil
-sleep 1
+sleep 3
 
 # Mata todos os processos do Firefox para garantir que o navegador esteja fechado
 pkill -f firefox-esr

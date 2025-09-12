@@ -42,7 +42,7 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then mv ${HOME}/Downloads/web
 init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
 
-# Configurar navegadores
+# Configurar tokens no Firefox
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_certificados_firefox.sh | sudo -u $USER sh ; fi"
 
 # Instalar PJeCalc

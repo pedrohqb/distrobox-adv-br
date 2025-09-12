@@ -9,25 +9,46 @@ additional_packages="firefox-esr firefox-esr-l10n-pt-br okular xterm libnss3-too
 ## INSTALAR PACOTES ADICIONAIS ##
 
 # Instalar Safesign
-init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://assets.ctfassets.net/zuadwp3l2xby/2loCJpZkGMJe5y06gwzM4C/a065ab00cd0c42ca04de8870dce3de06/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip && unzip ${HOME}/Downloads/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip -d ${HOME}/Downloads && apt install -y ${HOME}/Downloads/SafeSign\ IC\ Standard\ Linux\ 4.2.1.0-AET.000\ ub2404\ x86_64.deb && rm ${HOME}/Downloads/SafeSign\ IC\ Standard\ Linux\ 4.2.1.0-AET.000\ ub2404\ x86_64.deb ${HOME}/Downloads/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://assets.ctfassets.net/zuadwp3l2xby/2loCJpZkGMJe5y06gwzM4C/a065ab00cd0c42ca04de8870dce3de06/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then unzip ${HOME}/Downloads/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip -d ${HOME}/Downloads; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/SafeSign\ IC\ Standard\ Linux\ 4.2.1.0-AET.000\ ub2404\ x86_64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/SafeSign\ IC\ Standard\ Linux\ 4.2.1.0-AET.000\ ub2404\ x86_64.deb ${HOME}/Downloads/SafeSign_IC_Standard_Linux_ub2404_4.2.1.0-AET.000.zip; fi"
 
 # Instalar SafeNet
-init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://www.digicert.com/StaticFiles/Linux_SAC_10.9_GA.zip && unzip ${HOME}/Downloads/Linux_SAC_10.9_GA.zip -d ${HOME}/Downloads && apt install -y ${HOME}/Downloads/SAC_10.9\ GA/Installation/withoutUI/Ubuntu-2204/safenetauthenticationclient-core_10.9.4723_amd64.deb && rm -rf ${HOME}/Downloads/SAC_10.9\ GA ${HOME}/Downloads/Linux_SAC_10.9_GA.zip; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://www.digicert.com/StaticFiles/Linux_SAC_10.9_GA.zip; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then unzip ${HOME}/Downloads/Linux_SAC_10.9_GA.zip -d ${HOME}/Downloads; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/SAC_10.9\ GA/Installation/withoutUI/Ubuntu-2204/safenetauthenticationclient-core_10.9.4723_amd64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/Downloads/SAC_10.9\ GA ${HOME}/Downloads/Linux_SAC_10.9_GA.zip; fi"
+
+# Instalar Java (Zulu)
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://cdn.azul.com/zulu/bin/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb; fi"
 
 # Instalar PJeOffice
-init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pje-office-debian/releases/download/2.5.16u-1/pje-office_2.5.16u-1_amd64.deb && wget -P ${HOME}/Downloads https://cdn.azul.com/zulu/bin/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb && apt install -y ${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb ${HOME}/Downloads/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb && rm ${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb ${HOME}/Downloads/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pje-office-debian/releases/download/2.5.16u-1/pje-office_2.5.16u-1_amd64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb; fi"
 
 # Instalar lacuna-webpki
-init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://get.webpkiplugin.com/Downloads/2.13.3/setup-deb-64 && mv ${HOME}/Downloads/setup-deb-64 ${HOME}/Downloads/setup-deb-64.deb && apt install -y ${HOME}/Downloads/setup-deb-64.deb && rm ${HOME}/Downloads/setup-deb-64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://get.webpkiplugin.com/Downloads/2.13.3/setup-deb-64; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then mv ${HOME}/Downloads/setup-deb-64 ${HOME}/Downloads/setup-deb-64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/setup-deb-64.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/setup-deb-64.deb; fi"
 
 # Instalar softplan-websigner
-init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb && mv ${HOME}/Downloads/webpki-chrome-64-deb ${HOME}/Downloads/webpki-chrome-64-deb.deb && apt install -y ${HOME}/Downloads/webpki-chrome-64-deb.deb && rm ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then mv ${HOME}/Downloads/webpki-chrome-64-deb ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
 
 # Configurar navegadores
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_certificados_firefox.sh | sudo -u $USER sh ; fi"
 
 # Instalar PJeCalc
-init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pjecalc-instalador-deb/releases/download/1.25.04.17-1/pjecalc-instalador-1.25.04.17.deb && apt install -y ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb && rm ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pjecalc-instalador-deb/releases/download/1.25.04.17-1/pjecalc-instalador-1.25.04.17.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb; fi"
 
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts; fi"

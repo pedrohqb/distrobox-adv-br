@@ -30,20 +30,20 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Download
 init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb; fi"
 
-# Instalar lacuna-webpki
+# Instalar Lacuna Webpki
 init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://get.webpkiplugin.com/Downloads/2.13.3/setup-deb-64; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then mv ${HOME}/Downloads/setup-deb-64 ${HOME}/Downloads/setup-deb-64.deb; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/setup-deb-64.deb; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/setup-deb-64.deb; fi"
 
-# Instalar softplan-websigner
+# Instalar Softplan Websigner
 init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then mv ${HOME}/Downloads/webpki-chrome-64-deb ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/webpki-chrome-64-deb.deb; fi"
 
 # Configurar tokens no Firefox
-init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_certificados_firefox.sh | sudo -u $USER sh ; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"
 
 # Instalar PJeCalc
 init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pjecalc-instalador-deb/releases/download/1.25.04.17-1/pjecalc-instalador-1.25.04.17.deb; fi"

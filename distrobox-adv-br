@@ -35,5 +35,5 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 # Assegurar que a instalação dos pacotes adicionais não se repita
 init_hooks="touch /root/.first_run_complete"
 
-# Exportar todos os aplicativos relevantes (com exceção do PJeCalc deverá ser exportado manualmente)
+# Exportar todos os aplicativos relevantes (com exceção do PJeCalc, que deverá ser exportado manualmente)
 exported_apps="firefox-esr tokenadmin okular pjeoffice-pro"

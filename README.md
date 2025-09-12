@@ -66,23 +66,13 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 
 ## Uso
 
-Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**.
-
-Feita a instalação, é importante habilitar o uso do Safesign pelo Firefox. Para tanto, basta iniciar o aplicativo **Utilitário de administração de token**, acessar o menu **Integração** e selecionar **Instalar o SafeSign no Firefox**.
-
-Para habilitar o SafeNet pelo Firefox, basta abrir o navegador, ir em **Configurações**, pesquisar por **Dispositivos de segurança** e nele clicar. Uma vez aberto o Gerenciador de dispositivos, clicar em **Carregar**, dar o nome ao módulo de "SafeNet" (sem aspas), dar o nome do arquivo do módulo de "/lib/libeToken.so" (sem aspas), e, ao final, pressionar **Ok**.
+Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**. Os token SafeNet e Safesign já estão habilitados.
 
 Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
 
 ```bash
 distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh && distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-instalar-remover.sh
 ```
-
----
-
-## A fazer
-
-+ Automatizar a instalação do certificado digital como dispositivo de segurança no Firefox.
 
 ---
 

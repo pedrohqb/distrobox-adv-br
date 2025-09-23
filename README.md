@@ -71,7 +71,7 @@ Terminada a instalação, os aplicativos acima mencionados estarão disponíveis
 Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
 
 ```bash
-distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh && distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-instalar-remover.sh
+distrobox enter distrobox-adv-br -- pjecalc-instalar-remover.sh && distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh
 ```
 
 ---

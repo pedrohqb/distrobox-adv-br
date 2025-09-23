@@ -68,12 +68,6 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 
 Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**. Os token SafeNet e Safesign já estão habilitados no Firefox.
 
-Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
-
-```bash
-distrobox enter distrobox-adv-br -- pjecalc-instalar-remover.sh && distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh
-```
-
 ---
 
 ## Suporte

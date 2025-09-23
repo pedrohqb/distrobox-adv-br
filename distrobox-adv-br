@@ -53,6 +53,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/pje
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts; fi"
 
+# Fazer link simbólico da pasta "Downloads" do usuário na "home" do distrobox-adv-br
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rmdir ${HOME}/.distrobox-adv-br/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br/; fi"
+
 # Assegurar que a instalação dos pacotes adicionais não se repita
 init_hooks="touch /root/.first_run_complete"
 

@@ -60,4 +60,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rmdir ${HOME}/.distrobox
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes (com exceção do PJeCalc, que deverá ser exportado manualmente)
-exported_apps="firefox-esr tokenadmin okular pjeoffice-pro"
+exported_apps="firefox-esr tokenadmin okular pjeoffice-pro pjecalc-instalar-remover.sh pjecalc-abrir.sh"

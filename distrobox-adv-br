@@ -46,9 +46,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/web
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"
 
 # Instalar PJeCalc
-init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pjecalc-instalador-deb/releases/download/1.25.04.17-1/pjecalc-instalador-1.25.04.17.deb; fi"
-init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb; fi"
-init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/pjecalc-instalador-1.25.04.17.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then wget -P ${HOME}/Downloads https://github.com/pedrohqb/pjecalc-instalador-deb/releases/download/2.14.0-1/pjecalc-instalador-2.14.0-1.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then apt install -y ${HOME}/Downloads/pjecalc-instalador-2.14.0-1.deb; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/Downloads/pjecalc-instalador-2.14.0-1.deb; fi"
 
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts; fi"

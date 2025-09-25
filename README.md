@@ -24,13 +24,13 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian e Ubuntu:
+Debian (versão 13 ou superior) e Ubuntu (versão 25.04 ou superior):
 
 ```bash
 sudo apt install pcscd libccid distrobox podman
 ```
 
-Fedora Workstation e KDE Plasma:
+Fedora Workstation e KDE Plasma (versão 41 ou superior):
 
 ```bash
 sudo dnf install distrobox podman
@@ -41,7 +41,7 @@ Arch Linux:
 pacman -S distrobox podman pcsclite ccid
 ```
 
-openSUSE:
+openSUSE Tumbleweed:
 ```bash
 sudo zypper in distrobox podman pcsc-ccid
 ```

@@ -14,9 +14,9 @@ Estão incluídos:
    
 6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-7) Firefox-OSR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc; e
+7) Firefox-ESR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc; e
 
-8) PJeCalc, utilizado para cálculos trabalhistas no sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ.
+8) PJeCalc, utilizado para cálculos trabalhistas no sistema PJe, fornecido pelo Tribunal Regional do Trabalho da 8ª Região.
 
 ---
 
@@ -24,13 +24,13 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian e Ubuntu:
+Debian (versão 13 ou superior) e Ubuntu (versão 25.04 ou superior):
 
 ```bash
 sudo apt install pcscd libccid distrobox podman
 ```
 
-Fedora Workstation e KDE Plasma:
+Fedora Workstation e KDE Plasma (versão 41 ou superior):
 
 ```bash
 sudo dnf install distrobox podman
@@ -41,7 +41,7 @@ Arch Linux:
 pacman -S distrobox podman pcsclite ccid
 ```
 
-openSUSE:
+openSUSE Tumbleweed:
 ```bash
 sudo zypper in distrobox podman pcsc-ccid
 ```
@@ -67,12 +67,6 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 ## Uso
 
 Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**. Os token SafeNet e Safesign já estão habilitados no Firefox.
-
-Caso vá utilizar PJeCalc, para exportá-lo ao menu ou equivalente de seu ambiente desktop basta rodar o seguinte comando:
-
-```bash
-distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-abrir.sh && distrobox enter distrobox-adv-br -- distrobox-export --app pjecalc-instalar-remover.sh
-```
 
 ---
 

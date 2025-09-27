@@ -8,7 +8,6 @@ ARQUIVO_DEB="${HOME}/Downloads/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb"
 CHECKSUM_JAVA="1b5a3799dc5466137f3ef921d8e1ea50471aecbe895fdaf5afff8d722cfe3b37"
 
 echo "Baixando Java Zulu 11..."
-mkdir -p "${HOME}/Downloads"
 wget -P "${HOME}/Downloads" "${URL_JAVA}"
 
 # Verificação de Checksum

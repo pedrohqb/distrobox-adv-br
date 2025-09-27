@@ -13,8 +13,8 @@ NOME_SAFENET="SafeNet"
 echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-esr)..."
 firefox --headless --new-tab about:blank &
 
-# Espera por 3 segundos para o Firefox criar os arquivos do perfil
-sleep 3
+# Espera por 6 segundos para o Firefox criar os arquivos do perfil
+sleep 6
 
 # Mata todos os processos do Firefox para garantir que o navegador esteja fechado
 pkill -f firefox-esr

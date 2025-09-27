@@ -20,7 +20,7 @@ fi
 echo "Checksum verificado com sucesso."
 
 echo "Instalando PJeCalc..."
-apt update && apt install -y "${ARQUIVO_DEB}"
+apt install -y "${ARQUIVO_DEB}"
 
 echo "Limpando arquivos do PJeCalc..."
 rm "${ARQUIVO_DEB}"

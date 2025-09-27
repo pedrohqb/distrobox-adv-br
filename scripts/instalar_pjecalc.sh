@@ -8,7 +8,6 @@ ARQUIVO_DEB="${HOME}/Downloads/pjecalc-instalador-2.14.0-2.deb"
 CHECKSUM_PJECALC="9a575783a5c5b1f00e39f50665eb9aa29c35ec519681fc2a4cf7a8a341a76f19"
 
 echo "Baixando PJeCalc..."
-mkdir -p "${HOME}/Downloads"
 wget -P "${HOME}/Downloads" "${URL_PJECALC}"
 
 # Verificação de Checksum

@@ -9,7 +9,6 @@ ARQUIVO_DEB="${HOME}/Downloads/setup-deb-64.deb"
 CHECKSUM_LACUNA="8b43c49f07d720480afb90f35a2f159abe916c8ec161e9a64f301e9aebfe9949"
 
 echo "Baixando Lacuna Web PKI..."
-mkdir -p "${HOME}/Downloads"
 wget -P "${HOME}/Downloads" "${URL_LACUNA}"
 
 echo "Renomeando arquivo..."

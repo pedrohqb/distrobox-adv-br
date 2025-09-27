@@ -8,7 +8,6 @@ ARQUIVO_DEB="${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb"
 CHECKSUM_PJEOFFICE="47f1bfe903f06a40b0287e57fa692f8d8fbe82541f582b9b298de1dd3e1bf4e5"
 
 echo "Baixando PJeOffice..."
-mkdir -p "${HOME}/Downloads"
 wget -P "${HOME}/Downloads" "${URL_PJEOFFICE}"
 
 # Verificação de Checksum

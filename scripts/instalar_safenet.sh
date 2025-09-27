@@ -25,7 +25,7 @@ echo "Descompactando SafeNet..."
 unzip "${ARQUIVO_ZIP}" -d "${HOME}/Downloads"
 
 echo "Instalando SafeNet..."
-apt update && apt install -y "${ARQUIVO_DEB}"
+apt install -y "${ARQUIVO_DEB}"
 
 echo "Limpando arquivos do SafeNet..."
 rm -rf "${DIRETORIO_EXTRAIDO}" "${ARQUIVO_ZIP}"

@@ -10,7 +10,6 @@ ARQUIVO_DEB="${DIRETORIO_EXTRAIDO}/Installation/withoutUI/Ubuntu-2204/safenetaut
 CHECKSUM_SAFENET="46759cfe91d736af18a49d10e4749f264022db44e04ed4caf94e1ca77d6a013e"
 
 echo "Baixando SafeNet Authentication Client..."
-mkdir -p "${HOME}/Downloads"
 wget -P "${HOME}/Downloads" "${URL_SAFENET}"
 
 # Verificação de Checksum

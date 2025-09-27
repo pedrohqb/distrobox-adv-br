@@ -24,7 +24,7 @@ fi
 echo "Checksum verificado com sucesso."
 
 echo "Instalando Lacuna Web PKI..."
-apt update && apt install -y "${ARQUIVO_DEB}"
+apt install -y "${ARQUIVO_DEB}"
 
 echo "Limpando arquivos do Lacuna Web PKI..."
 rm "${ARQUIVO_DEB}"

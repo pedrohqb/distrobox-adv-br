@@ -9,7 +9,6 @@ ARQUIVO_DEB="${HOME}/Downloads/SafeSign IC Standard Linux 4.2.1.0-AET.000 ub2404
 CHECKSUM_SAFESIGN="3cf3e94ca8dddefe4e192c2a84a14cbdfd0789271d02d7d323da0b48ecdb8ac7"
 
 echo "Baixando SafeSign IC Standard..."
-mkdir -p "${HOME}/Downloads"
 wget -P "${HOME}/Downloads" "${URL_SAFESIGN}"
 
 # Verificação de Checksum

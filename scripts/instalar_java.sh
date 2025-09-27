@@ -20,7 +20,7 @@ fi
 echo "Checksum verificado com sucesso."
 
 echo "Instalando Java Zulu 11..."
-apt update && apt install -y "${ARQUIVO_DEB}"
+apt install -y "${ARQUIVO_DEB}"
 
 echo "Limpando arquivos do Java Zulu 11..."
 rm "${ARQUIVO_DEB}"

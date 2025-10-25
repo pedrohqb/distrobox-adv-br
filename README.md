@@ -24,9 +24,9 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian (versão 13 ou superior), Ubuntu (versão 25.04 ou superior) e Linux Mint Debian Edition (7 ou superior):
-
 **OBS**: Não há suporte para Ubuntu 24.04 LTS, nem para distros dele derivadas, como Linux Mint 22.2 ou ZorinOS 18, tendo em vista a versão desatualizada do Distrobox, do podman, do pcsc-lite e do ccid.
+
+Debian (versão 13 ou superior), Ubuntu (versão 25.04 ou superior) e Linux Mint Debian Edition (7 ou superior):
 
 ```bash
 sudo apt install pcscd libccid distrobox podman

@@ -74,4 +74,4 @@ Terminada a instalação, os aplicativos acima mencionados estarão disponíveis
 
 Havendo qualquer dificuldade no uso de ferramenta, forneça um issue e peça suporte no grupo oficial no [`Telegram`](https://t.me/advogados_linux).
 
-Backup do projeto pode ser encontrado no [`Gitlab`](https://gitlab.com/pedrohqb/distrobox-adv-br).
+Backup do projeto pode ser encontrado no [`GitLab`](https://gitlab.com/pedrohqb/distrobox-adv-br).

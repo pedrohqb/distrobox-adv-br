@@ -1,6 +1,6 @@
 # Distrobox-adv-br
 
-**OBS**: Desde 24 de outubro de 2025, usuários brasileiros do Github têm relatado aleatoriamente receberem o erro "429: Too Many Requests", o que tem afetado o funcionamento do presente projeto. Diante disso, recomendo até segunda ordem utilizar o backup do projeto no [`GitLab`](https://gitlab.com/pedrohqb/distrobox-adv-br).
+**OBS**: Desde 24 de outubro de 2025, usuários brasileiros do GitHub têm relatado aleatoriamente receberem o erro "429: Too Many Requests", o que tem afetado o funcionamento do presente projeto. Diante disso, recomendo até segunda ordem utilizar o backup do projeto no [`GitLab`](https://gitlab.com/pedrohqb/distrobox-adv-br).
 
 ---
 

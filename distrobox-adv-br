@@ -42,4 +42,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox-esr tokenadmin /usr/share/applications/org.kde.okular.desktop pjeoffice-pro pjecalc-instalar-remover.sh pjecalc-abrir.sh"
+exported_apps="firefox-esr tokenadmin okular pjeoffice-pro pjecalc-instalar-remover.sh pjecalc-abrir.sh"

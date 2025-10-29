@@ -1,9 +1,5 @@
 # Distrobox-adv-br
 
-**OBS**: Desde 24 de outubro de 2025, usuários brasileiros do GitHub têm relatado aleatoriamente receberem o erro "429: Too Many Requests", o que tem afetado o funcionamento do presente projeto. Diante disso, recomendo até segunda ordem utilizar o backup do projeto no [`GitLab`](https://gitlab.com/pedrohqb/distrobox-adv-br).
-
----
-
 Trata-se de arquivo assemble para criar contêiner do Debian 13 (trixie) via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em qualquer distribuição de Linux recente. 
 
 Estão incluídos:

@@ -22,4 +22,4 @@ apt update && \
 # 4. Instala ou atualiza o pacote 'firefox-esr'.
 # Devido à regra de Pin-Priority 501, a versão instalada será a do PPA oficial.
 # O '-y' confirma automaticamente a instalação.
-apt install firefox-esr -y
+apt install firefox -y

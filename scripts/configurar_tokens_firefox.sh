@@ -66,7 +66,7 @@ fi
 
 # Adicionar SerproID
 echo "Adicionando a biblioteca ${NOME_SERPROID}..."
-serproid &
+/usr/share/serproid-desktop/jre/bin/java -Djava.util.logging.config.class=smartcert.LogConfig -classpath "/usr/share/serproid-desktop/lib/*" smartcert.Main &
 sleep 1
 pkill -f java
 yes | modutil -add "${NOME_SERPROID}" -libfile "${CAMINHO_SERPROID}" -dbdir "sql:${CAMINHO_DO_PERFIL}"

@@ -82,7 +82,7 @@ echo "Novo pacote criado: $NEW_PACKAGE_NAME"
 
 echo "--- ⬇️ 6. Instalar o Novo Pacote DEB ---"
 # Usa APT para instalar o arquivo local (./) e resolver dependências automaticamente
-apt install -y "./$NEW_PACKAGE_NAME"
+apt install -y "./DOWNLOAD_DIR/$NEW_PACKAGE_NAME"
 
 echo "--- 🧹 7. Limpeza Final (Remoção total) ---"
 rm -rf "$WORK_DIR" "$PACKAGE_NAME" "$NEW_PACKAGE_NAME"

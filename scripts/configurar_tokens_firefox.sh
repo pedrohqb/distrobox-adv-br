@@ -9,6 +9,10 @@ NOME_SAFESIGN="SafeSign"
 CAMINHO_SAFENET="/usr/lib/libeToken.so"
 NOME_SAFENET="SafeNet"
 
+# Defina o caminho para a sua biblioteca SerproID e o nome do módulo
+CAMINHO_SERPROID="/usr/lib/libserproidp11.so"
+NOME_SERPROID="SerproID"
+
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
 echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-esr)..."
 firefox --headless --new-tab about:blank &
@@ -58,6 +62,17 @@ if [ $? -eq 0 ]; then
     echo "${NOME_SAFENET} adicionado com sucesso."
 else
     echo "Erro: Falha ao adicionar ${NOME_SAFENET}. Verifique se o caminho da biblioteca está correto."
+fi
+
+# Adicionar SerproID
+echo "Adicionando a biblioteca ${NOME_SERPROID}..."
+yes | modutil -add "${NOME_SERPROID}" -libfile "${CAMINHO_SERPROID}" -dbdir "sql:${CAMINHO_DO_PERFIL}"
+
+# Verifica se a adição foi bem-sucedida
+if [ $? -eq 0 ]; then
+    echo "${NOME_SERPROID} adicionado com sucesso."
+else
+    echo "Erro: Falha ao adicionar ${NOME_SERPROID}. Verifique se o caminho da biblioteca está correto."
 fi
 
 echo "---"

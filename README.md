@@ -18,7 +18,7 @@ Estão incluídos:
    
 7) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-8) Firefox-ESR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+8) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ---
 

@@ -36,7 +36,7 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/instalar-firefox.sh | sh ; fi"
 
 # Configurar tokens no Firefox
-init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"
 
 # Fazer link simbólico da pasta "Downloads" do usuário na "home" do distrobox-adv-br
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobox-adv-br-ubuntu-24-04/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br-ubuntu-24-04/; fi"
@@ -48,4 +48,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox tokenadmin okular pjeoffice-pro serproid"
+exported_apps="firefox-esr tokenadmin okular pjeoffice-pro serproid"

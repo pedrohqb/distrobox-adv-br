@@ -65,10 +65,7 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 Para Ubuntu 24.04 ou distros derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS:
 
 ```bash
-wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04
-```
-```bash
-distrobox-assemble create --file $HOME/Downloads/distrobox-adv-br-ubuntu-24-04
+wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04 && distrobox-assemble create --file $HOME/Downloads/distrobox-adv-br-ubuntu-24-04
 ```
 
 ---

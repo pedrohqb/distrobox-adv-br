@@ -1,7 +1,7 @@
-[distrobox-adv-br-ubuntu]
+[distrobox-adv-br-ubuntu-24-04]
 # Criar contêiner com Ubuntu 24.04
 image=docker.io/library/ubuntu:24.04
-home=~/.distrobox-adv-br-ubuntu
+home=~/.distrobox-adv-br-ubuntu-24-04
 
 # Instalar pacotes adicionais do sistema
 additional_packages="okular xterm libnss3-tools software-properties-common"
@@ -36,10 +36,10 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"
 
 # Fazer link simbólico da pasta "Downloads" do usuário na "home" do distrobox-adv-br
-init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobox-adv-br-ubuntu/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br-ubuntu/; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobox-adv-br-ubuntu-24-04/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br-ubuntu-24-04/; fi"
 
 # Limpeza pós-instalação
-init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br-ubuntu/.wget-hsts; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br-ubuntu-24-04/.wget-hsts; fi"
 
 # Assegurar que a instalação dos pacotes adicionais não se repita
 init_hooks="touch /root/.first_run_complete"

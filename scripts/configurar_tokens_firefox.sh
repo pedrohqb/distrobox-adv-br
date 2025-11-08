@@ -10,7 +10,7 @@ CAMINHO_SAFENET="/usr/lib/libeToken.so"
 NOME_SAFENET="SafeNet"
 
 # Defina o caminho para a sua biblioteca SerproID e o nome do módulo
-CAMINHO_SERPROID="/usr/lib/libserproidp11.so"
+CAMINHO_SERPROID="/usr/lib/libneoidp11.so"
 NOME_SERPROID="SerproID"
 
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
@@ -66,9 +66,6 @@ fi
 
 # Adicionar SerproID
 echo "Adicionando a biblioteca ${NOME_SERPROID}..."
-/usr/share/serproid-desktop/jre/bin/java -Djava.util.logging.config.class=smartcert.LogConfig -classpath "/usr/share/serproid-desktop/lib/*" smartcert.Main &
-sleep 1
-pkill -f java
 yes | modutil -add "${NOME_SERPROID}" -libfile "${CAMINHO_SERPROID}" -dbdir "sql:${CAMINHO_DO_PERFIL}"
 
 # Verifica se a adição foi bem-sucedida

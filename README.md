@@ -14,9 +14,7 @@ Estão incluídos:
    
 6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-7) Firefox-ESR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc; e
-
-8) PJeCalc, utilizado para cálculos trabalhistas no sistema PJe, fornecido pelo Tribunal Regional do Trabalho da 8ª Região.
+7) Firefox-ESR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ---
 

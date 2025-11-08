@@ -65,13 +65,13 @@ sudo systemctl enable --now pcscd.service
 
 3. Instalar o distrobox-adv-br mediante o comando abaixo:
 
-Para distros em geral:
+Para distribuições em geral:
 
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
 ```
 
-Para Ubuntu 24.04 ou distros derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS:
+Para Ubuntu 24.04 ou distribuições derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS:
 
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04
@@ -87,7 +87,7 @@ Terminada a instalação, os aplicativos acima mencionados estarão disponíveis
 
 ## Configuração SerproID
 
-O certificado digital SerproID, por limitações da própria aplicação, com exceção do PJeOffice Pro, não pode ser automaticamente configurado. Para configurá-lo, deve-se aplicar as orientações a seguir:
+O certificado digital SerproID, por limitações da própria aplicação, não pode ser automaticamente configurado, com exceção do PJeOffice Pro. Para configurá-lo, deve-se aplicar as orientações a seguir:
 
 **Firefox**
 1) Acessar "Configurações";

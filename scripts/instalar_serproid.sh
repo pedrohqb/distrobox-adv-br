@@ -8,19 +8,24 @@ NEW_PACKAGE_NAME="${PACKAGE_NAME%.deb}_modificado.deb"
 URL="https://serprodrive.serpro.gov.br/s/Cc3EbToE9AFq4qX/download"
 SHA256SUM="0ffa9ffe5bc343cc758a12f28bd7f08aec4b6e843d1c043baf0b81572461e588"
 
+# Arquivos a serem modificados
+ICON_SOURCE="usr/share/serproid-desktop/SerproID.png"
+ICON_DEST="usr/share/icons/SerproID.png"
+DESKTOP_FILE="usr/share/applications/serproid.desktop"
+
 # Diretório de Trabalho (onde o script será executado e onde os DEBs ficarão)
 # O script irá se mover para este diretório.
 DOWNLOAD_DIR="$HOME/Downloads"
 # Diretório onde o pacote será descompactado
-WORK_DIR="$DOWNLOAD_DIR/serproid-desktop-work" 
+WORK_DIR="$DOWNLOAD_DIR/serproid-desktop-work"
 
 # Garantir que o script pare em qualquer erro
 set -e
 
 echo "--- ⚙️ Preparação e Verificação de Permissões ---"
 if [[ $EUID -ne 0 ]]; then
-   echo "Este script deve ser executado como root (sudo)."
-   exit 1
+    echo "Este script deve ser executado como root (sudo)."
+    exit 1
 fi
 
 echo "Diretório de trabalho definido: **$DOWNLOAD_DIR**"
@@ -55,15 +60,41 @@ echo "Arquivos de controle (DEBIAN) extraídos."
 dpkg-deb --fsys-tarfile "$PACKAGE_NAME" | tar -x --no-same-owner -C "$WORK_DIR"
 echo "Dados do pacote extraídos no diretório $WORK_DIR."
 
-echo "--- 🗑️ 4. Remover Arquivo Específico ($FILE_TO_REMOVE) ---"
-# O caminho completo deve usar WORK_DIR
-FULL_PATH_TO_REMOVE="$WORK_DIR/${FILE_TO_REMOVE}"
+echo "--- 🗑️ 4. Remover e Mover Arquivos ---"
 
+# Caminho completo para o arquivo a ser removido (autostart)
+FULL_PATH_TO_REMOVE="$WORK_DIR/${FILE_TO_REMOVE}"
 if [ -f "$FULL_PATH_TO_REMOVE" ]; then
     rm -f "$FULL_PATH_TO_REMOVE"
     echo "✅ Arquivo '$FILE_TO_REMOVE' removido com sucesso."
 else
-    echo "❌ ERRO: O arquivo '$FILE_TO_REMOVE' NÃO FOI ENCONTRADO. Verifique o caminho. Abortando."
+    echo "❌ AVISO: O arquivo '$FILE_TO_REMOVE' NÃO FOI ENCONTRADO, ignorando remoção."
+fi
+
+# 4a. Mover/Copiar o Ícone
+FULL_ICON_SOURCE="$WORK_DIR/$ICON_SOURCE"
+FULL_ICON_DEST="$WORK_DIR/$ICON_DEST"
+
+if [ -f "$FULL_ICON_SOURCE" ]; then
+    # Cria o diretório de destino se não existir dentro do WORK_DIR
+    mkdir -p "$(dirname "$FULL_ICON_DEST")"
+    mv "$FULL_ICON_SOURCE" "$FULL_ICON_DEST"
+    echo "✅ Ícone movido de '$ICON_SOURCE' para '$ICON_DEST'."
+else
+    echo "❌ ERRO: Arquivo de ícone ($ICON_SOURCE) NÃO ENCONTRADO. Abortando."
+    rm -rf "$WORK_DIR"
+    exit 1
+fi
+
+echo "--- 📝 4b. Modificar Arquivo .desktop ---"
+FULL_DESKTOP_FILE="$WORK_DIR/$DESKTOP_FILE"
+
+if [ -f "$FULL_DESKTOP_FILE" ]; then
+    # Usa 'sed' para substituir a linha 'Icon=/usr/share/serproid-desktop/SerproID.png' por 'Icon=SerproID.png'
+    sed -i 's|^Icon=.*|Icon=SerproID.png|g' "$FULL_DESKTOP_FILE"
+    echo "✅ Arquivo .desktop modificado para usar Icon=SerproID.png."
+else
+    echo "❌ ERRO: Arquivo .desktop ($DESKTOP_FILE) NÃO ENCONTRADO. Abortando."
     rm -rf "$WORK_DIR"
     exit 1
 fi

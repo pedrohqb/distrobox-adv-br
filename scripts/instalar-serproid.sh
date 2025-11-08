@@ -1,0 +1,80 @@
+#!/bin/bash
+# Script final para baixar, modificar (removendo etc/xdg/autostart/atualizacao-serproid.desktop), 
+# verificar e instalar um pacote DEB, e realizar a limpeza completa.
+
+# --- CONFIGURAÇÃO ---
+FILE_TO_REMOVE="etc/xdg/autostart/atualizacao-serproid.desktop"
+PACKAGE_NAME="serproid-desktop-2.1.6-amd64.deb"
+NEW_PACKAGE_NAME="${PACKAGE_NAME%.deb}_modificado.deb"
+URL="https://serprodrive.serpro.gov.br/s/Cc3EbToE9AFq4qX/download"
+SHA256SUM="0ffa9ffe5bc343cc758a12f28bd7f08aec4b6e843d1c043baf0b81572461e588"
+WORK_DIR="serproid-desktop-work"
+
+# Garantir que o script pare em qualquer erro
+set -e
+
+echo "--- ⚙️ Preparação e Verificação de Permissões ---"
+if [[ $EUID -ne 0 ]]; then
+   echo "Este script deve ser executado como root (sudo)."
+   exit 1
+fi
+
+echo "Pacote a ser modificado: $PACKAGE_NAME"
+echo "Arquivo a ser deletado: **$FILE_TO_REMOVE**"
+
+# Limpeza de execuções anteriores e arquivos residuais
+rm -rf "$WORK_DIR" "$PACKAGE_NAME" "$NEW_PACKAGE_NAME"
+
+echo "--- ⬇️ 1. Download do Pacote usando wget ---"
+# Baixa o arquivo e o salva com o nome PACKAGE_NAME
+wget -O "$PACKAGE_NAME" "$URL"
+echo "Download concluído."
+
+echo "--- 🔐 2. Verificação do SHA256 ---"
+echo "$SHA256SUM  $PACKAGE_NAME" | sha256sum -c -
+echo "Checksum verificado com sucesso."
+
+echo "--- 🛠️ 3. Descompactar para Modificação (Correção de Ownership) ---"
+mkdir "$WORK_DIR"
+
+# 3a. Extrai o diretório de controle (DEBIAN)
+dpkg-deb --control "$PACKAGE_NAME" "$WORK_DIR/DEBIAN"
+echo "Arquivos de controle (DEBIAN) extraídos."
+
+# 3b. Extrai o arquivo de dados (data.tar.xz) usando tar, ignorando proprietário
+# Isso corrige o erro "Cannot change ownership: Argumento inválido"
+dpkg-deb --fsys-tarfile "$PACKAGE_NAME" | tar -x --no-same-owner -C "$WORK_DIR"
+echo "Dados do pacote extraídos no diretório $WORK_DIR."
+
+echo "--- 🗑️ 4. Remover Arquivo Específico ($FILE_TO_REMOVE) ---"
+FULL_PATH_TO_REMOVE="$WORK_DIR/$FILE_TO_REMOVE"
+
+if [ -f "$FULL_PATH_TO_REMOVE" ]; then
+    rm -f "$FULL_PATH_TO_REMOVE"
+    echo "✅ Arquivo '$FILE_TO_REMOVE' removido com sucesso."
+else
+    echo "❌ ERRO: O arquivo '$FILE_TO_REMOVE' NÃO FOI ENCONTRADO. Verifique o caminho. Abortando."
+    rm -rf "$WORK_DIR"
+    exit 1
+fi
+
+# Remove o arquivo md5sums para forçar o recálculo pelo dpkg-deb.
+MD5SUMS_FILE="$WORK_DIR/DEBIAN/md5sums"
+if [ -f "$MD5SUMS_FILE" ]; then
+    rm -f "$MD5SUMS_FILE"
+    echo "Arquivo $MD5SUMS_FILE removido para forçar o recálculo."
+fi
+
+echo "--- ⚙️ 5. Reempacotar o Pacote Modificado ---"
+dpkg-deb -b "$WORK_DIR" "$NEW_PACKAGE_NAME"
+echo "Novo pacote criado: $NEW_PACKAGE_NAME"
+
+echo "--- ⬇️ 6. Instalar o Novo Pacote DEB ---"
+dpkg -i "$NEW_PACKAGE_NAME"
+# O comando apt install -f tenta resolver dependências que podem ter sido ignoradas
+apt install -f -y 
+
+echo "--- 🧹 7. Limpeza Final (Remoção total) ---"
+rm -rf "$WORK_DIR" "$PACKAGE_NAME" "$NEW_PACKAGE_NAME"
+echo "Arquivos temporários, pacote original e pacote modificado removidos."
+echo "✅ Processo finalizado com sucesso! O pacote modificado está instalado e todos os arquivos residuais foram excluídos."

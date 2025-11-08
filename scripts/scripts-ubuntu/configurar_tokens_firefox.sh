@@ -10,7 +10,7 @@ CAMINHO_SAFENET="/usr/lib/libeToken.so"
 NOME_SAFENET="SafeNet"
 
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
-echo "Iniciando o Firefox em modo headless para criar um novo perfil (default)..."
+echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-release)..."
 firefox --headless --new-tab about:blank &
 
 # Espera por 6 segundos para o Firefox criar os arquivos do perfil
@@ -22,8 +22,8 @@ echo "Processo do Firefox encerrado."
 echo "---"
 
 # --- Passo 2: Encontrar o diretório do perfil recém-criado ---
-# Procura por perfis que terminam com "default"
-CAMINHO_DO_PERFIL=$(find ~/.mozilla/firefox -maxdepth 1 -type d -name "*.default")
+# Procura por perfis que terminam com "default-release"
+CAMINHO_DO_PERFIL=$(find ~/.mozilla/firefox -maxdepth 1 -type d -name "*.default-release")
 
 # Verifica se o perfil foi encontrado
 if [ -z "$CAMINHO_DO_PERFIL" ]; then

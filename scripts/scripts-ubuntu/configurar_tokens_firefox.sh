@@ -22,7 +22,7 @@ echo "Processo do Firefox encerrado."
 echo "---"
 
 # --- Passo 2: Encontrar o diretório do perfil recém-criado ---
-# Procura por perfis que terminam com "default-esr"
+# Procura por perfis que terminam com "default"
 CAMINHO_DO_PERFIL=$(find ~/.mozilla/firefox -maxdepth 1 -type d -name "*.default")
 
 # Verifica se o perfil foi encontrado

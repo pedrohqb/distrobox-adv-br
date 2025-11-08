@@ -10,12 +10,8 @@ add-apt-repository ppa:mozillateam/ppa -y && \
 
 # 2. Cria um arquivo de 'APT Pinning' para dar preferência ao PPA.
 cat << EOF > /etc/apt/preferences.d/mozillateamppa
-# Define que as regras a seguir se aplicam a qualquer pacote que comece com 'firefox'.
 Package: firefox*
-# Define o repositório específico a ser priorizado, que é o PPA da equipe Mozilla.
 Pin: release o=LP-PPA-mozillateam
-# Define a prioridade do pacote. Valores acima de 500 (o padrão) forçam o sistema 
-# a preferir este pacote sobre qualquer outro com o mesmo nome.
 Pin-Priority: 501
 EOF
 

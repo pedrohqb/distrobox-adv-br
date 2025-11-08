@@ -67,9 +67,8 @@ fi
 # Adicionar SerproID
 echo "Adicionando a biblioteca ${NOME_SERPROID}..."
 serproid &
-sleep 2
-pkill -f 'java'
-sleep 2
+sleep 1
+pkill -f java
 yes | modutil -add "${NOME_SERPROID}" -libfile "${CAMINHO_SERPROID}" -dbdir "sql:${CAMINHO_DO_PERFIL}"
 
 # Verifica se a adição foi bem-sucedida

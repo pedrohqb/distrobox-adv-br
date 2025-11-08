@@ -4,7 +4,7 @@ image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr firefox-esr-l10n-pt-br okular xterm libnss3-tools"
+additional_packages="firefox-esr firefox-esr-l10n-pt-br okular libnss3-tools"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 
@@ -25,9 +25,6 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 
 # Instalar Softplan Websigner
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_websigner.sh | sh ; fi"
-
-# Instalar PJeCalc
-init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_pjecalc.sh | sh ; fi"
 
 # Configurar tokens no Firefox
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"

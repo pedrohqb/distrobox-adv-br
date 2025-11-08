@@ -24,12 +24,19 @@ Estão incluídos:
 
 ## Instalação
 
+
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
 Debian, Ubuntu, Linux Mint, Zorin e Pop!_OS:
 
 ```bash
 sudo apt install pcscd libccid distrobox podman
+```
+
+**OBS:**: Se sua distribuição for Ubuntu 24.04 ou derivada, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS, é necessário antes instalar o PPA do distrobox, uma vez que a versão da distribuição está desatualizada:
+
+```bash
+sudo add-apt-repository ppa:michel-slm/distrobox -y
 ```
 
 Fedora Workstation e KDE Plasma:
@@ -67,7 +74,7 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 Para Ubuntu 24.04 ou distros derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS:
 
 ```bash
-wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04 && distrobox-assemble create --file $HOME/Downloads/distrobox-adv-br-ubuntu-24-04
+distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04
 ```
 
 ---

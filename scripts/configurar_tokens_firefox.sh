@@ -11,7 +11,7 @@ NOME_SAFENET="SafeNet"
 
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
 echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-esr)..."
-firefox --headless --new-tab about:blank &
+firefox-esr --headless --new-tab about:blank &
 
 # Espera por 6 segundos para o Firefox criar os arquivos do perfil
 sleep 6

@@ -1,6 +1,6 @@
 # Distrobox-adv-br
 
-Trata-se de arquivo assemble para criar contêiner do Debian 13 (trixie) via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em qualquer distribuição de Linux recente. 
+Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em qualquer distribuição de Linux recente. 
 
 Estão incluídos:
 
@@ -24,13 +24,13 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian, Ubuntu e Linux Mint Debian Edition:
+Debian, Ubuntu, Linux Mint, Zorin e Pop!_OS:
 
 ```bash
 sudo apt install pcscd libccid distrobox podman
 ```
 
-Fedora Workstation e KDE Plasma (versão 41 ou superior):
+Fedora Workstation e KDE Plasma:
 
 ```bash
 sudo dnf install distrobox podman
@@ -56,13 +56,13 @@ sudo systemctl enable --now pcscd.service
 
 3. Instalar o distrobox-adv-br mediante o comando abaixo:
 
-Para distros em geral
+Para distros em geral:
 
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
 ```
 
-Para Ubuntu 24.04 ou distros derivadas, tais com Linux Mint, Zorin OS e Pop!_OS:
+Para Ubuntu 24.04 ou distros derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS:
 
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04
@@ -79,5 +79,3 @@ Terminada a instalação, os aplicativos acima mencionados estarão disponíveis
 ## Suporte
 
 Havendo qualquer dificuldade no uso de ferramenta, forneça um issue e peça suporte no grupo oficial no [`Telegram`](https://t.me/advogados_linux).
-
-Backup do projeto pode ser encontrado no [`GitLab`](https://gitlab.com/pedrohqb/distrobox-adv-br).

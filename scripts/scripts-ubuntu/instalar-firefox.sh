@@ -6,7 +6,6 @@
 
 # 1. Adiciona o PPA da equipe Mozilla aos repositórios do sistema.
 # Isso garante acesso às versões mais recentes e oficiais do Firefox.
-apt install software-properties-common -y && \
 add-apt-repository ppa:mozillateam/ppa -y && \
 
 # 2. Cria um arquivo de 'APT Pinning' para dar preferência ao PPA.

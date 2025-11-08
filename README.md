@@ -8,7 +8,7 @@ Estão incluídos:
 
 2) Driver denominado SafeNet necessário para uso do token SafeNet 5100, o segundo mais utilizado pela advocacia;
 
-3) Driver denominado SerproID, necessário para uso do certificado digital da nuvem da Serpro;
+3) Driver denominado SerproID, necessário para uso do certificado digital na nuvem da Serpro;
   
 4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    

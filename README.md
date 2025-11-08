@@ -5,16 +5,20 @@ Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que
 Estão incluídos:
 
 1) Driver denominado Safesign necessário para uso do token GD Burti, atualmente o mais utilizado pela advocacia;
-   
-3) Driver denominado SafeNet necessário para uso do token SafeNet 5100, o segundo mais utilizado pela advocacia;
 
+2) Driver denominado SafeNet necessário para uso do token SafeNet 5100, o segundo mais utilizado pela advocacia;
+
+3) Driver denominado SerproID, necessário para uso do certificado digital da nuvem da Serpro;
+  
 4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    
 5) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
-6) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
+6) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
+   
+7) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-7) Firefox-ESR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+8) Firefox-ESR, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ---
 

@@ -70,9 +70,7 @@ dpkg-deb -b "$WORK_DIR" "$NEW_PACKAGE_NAME"
 echo "Novo pacote criado: $NEW_PACKAGE_NAME"
 
 echo "--- ⬇️ 6. Instalar o Novo Pacote DEB ---"
-dpkg -i "$NEW_PACKAGE_NAME"
-# O comando apt install -f tenta resolver dependências que podem ter sido ignoradas
-apt install -f -y 
+apt install -y "$NEW_PACKAGE_NAME"
 
 echo "--- 🧹 7. Limpeza Final (Remoção total) ---"
 rm -rf "$WORK_DIR" "$PACKAGE_NAME" "$NEW_PACKAGE_NAME"

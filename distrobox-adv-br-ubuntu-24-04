@@ -26,9 +26,6 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 # Instalar Softplan Websigner
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_websigner.sh | sh ; fi"
 
-# Instalar PJeCalc
-init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_pjecalc.sh | sh ; fi"
-
 # Instalar Firefox no Ubuntu
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/instalar-firefox.sh | sh ; fi"
 
@@ -45,4 +42,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox tokenadmin okular pjeoffice-pro pjecalc-instalar-remover.sh pjecalc-abrir.sh"
+exported_apps="firefox tokenadmin okular pjeoffice-pro"

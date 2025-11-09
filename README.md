@@ -71,7 +71,7 @@ Para distribuições em geral:
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
 ```
 
-Para Ubuntu 24.04 ou distribuições derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS:
+Para Ubuntu 24.04 ou distribuições derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS, bem como Bluefin LTS (baseado em CentOS):
 
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04

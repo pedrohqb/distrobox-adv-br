@@ -4,7 +4,7 @@ image=docker.io/library/ubuntu:24.04
 home=~/.distrobox-adv-br-ubuntu-24-04
 
 # Instalar pacotes adicionais do sistema
-additional_packages="okular xterm libnss3-tools software-properties-common"
+additional_packages="okular libnss3-tools software-properties-common"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 

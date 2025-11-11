@@ -81,21 +81,14 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 
 ## Uso
 
-Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**. Os token SafeNet e Safesign já estão habilitados no Firefox. 
+Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**. Os token SafeNet e Safesign já estão habilitados no Firefox; o certificado na nuvem SerproID é configurado automaticamente no Firefox após sua instalação na máquina. 
 
 ---
 
 ## Configuração SerproID
 
-O certificado digital SerproID, por limitações da própria aplicação, não pode ser automaticamente configurado, com exceção do PJeOffice Pro. Para configurá-lo, deve-se aplicar as orientações a seguir:
+Para configurar o certificado SerproID no plugin do Lacuna Webpki, Softplan Websigner e Certisign WebSigner, deve-se aplicar as orientações a seguir:
 
-**Firefox**
-1) Acessar "Configurações";
-2) Acessar "Dispositivos de segurança" e selecionar "Carregar";
-3) Incluir nome do módulo como "SerproID" (sem aspas); e
-4) Incluir nome do arquivo do módulo como "/lib/libneoidp11.so" (sem aspas) e pressionar "Ok".
-
-**Lacuna Webpki, Softplan Websigner e Certisign WebSigner**
 1) Abrir o plugin no Firefox;
 2) Acessar a aba "Cripto Dispositivos";
 3) Em "Opções personalizadas", no campo "Nome do arquivo SO (com extensão), adicionar "/lib/libneoidp11.so" (sem aspas) e apertar o sinal de "+".

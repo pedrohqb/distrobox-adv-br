@@ -62,3 +62,6 @@ fi
 
 echo "---"
 echo "Operação concluída. Verifique os resultados acima."
+
+# Exportar corretamente o Firefox
+distrobox-export -a firefox --extra-flags "--name=distrobox-adv-br-ubuntu-24-04-firefox"

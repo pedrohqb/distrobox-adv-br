@@ -62,8 +62,3 @@ fi
 
 echo "---"
 echo "Operação concluída. Verifique os resultados acima."
-
-# --- Passo 4: Exportar o arquivo .desktop do Firefox ---
-
-# Exportar corretamente o Firefox, a fim de evitar incompatibilidades com eventual Firefox do host
-distrobox-export -a firefox --extra-flags "--name=distrobox-adv-br-ubuntu-24-04-firefox"

@@ -1,7 +1,7 @@
 #!/bin/bash
 # -------------------------------------------------------------
 # Script para Modificar e Instalar Assinador Serpro e Dependências
-# Execute este script como root: sudo ./script_instalacao.sh
+# Execute este script como root
 # -------------------------------------------------------------
 
 # --- CONFIGURAÇÃO DE PACOTES E URLs ---

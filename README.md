@@ -12,13 +12,15 @@ Estão incluídos:
   
 4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    
-5) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
+5) Assinador Serpro, utilizado para assinar documentos com certificado digital ou validar documentos já assinados;
    
-6) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
+6) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
-7) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
+7) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
+   
+8) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-8) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+9) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ---
 

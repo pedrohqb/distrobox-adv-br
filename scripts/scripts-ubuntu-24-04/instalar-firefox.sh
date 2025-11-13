@@ -19,7 +19,7 @@ EOF
 # Isso baixa as informações dos pacotes recém-adicionados do PPA.
 apt update && \
 
-# 4. Instala ou atualiza o pacote 'firefox-esr'.
+# 4. Instala ou atualiza o pacote 'firefox'.
 # Devido à regra de Pin-Priority 501, a versão instalada será a do PPA oficial.
 # O '-y' confirma automaticamente a instalação.
-apt install firefox -y
+apt install firefox firefox-locale-pt -y

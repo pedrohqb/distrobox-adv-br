@@ -21,12 +21,6 @@ WORK_DIR="$DOWNLOAD_DIR/serproid-desktop-work"
 # Garantir que o script pare em qualquer erro
 set -e
 
-echo "--- ⚙️ Preparação e Verificação de Permissões ---"
-if [[ $EUID -ne 0 ]]; then
-    echo "Este script deve ser executado como root (sudo)."
-    exit 1
-fi
-
 echo "Diretório de trabalho definido: **$DOWNLOAD_DIR**"
 echo "Pacote a ser modificado: $PACKAGE_NAME"
 

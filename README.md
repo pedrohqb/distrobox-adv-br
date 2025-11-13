@@ -99,6 +99,19 @@ Para configurar o certificado SerproID no plugin do Lacuna Webpki, Softplan Webs
 
 ---
 
+## Desinstalação
+
+Para desinstalar (inclusive para  fazer uma reinstalação limpa), basta rodar os seguintes comandos:
+
+```bash
+distrobox rm distrobox-adv-br distrobox-adv-br-ubuntu-24-04
+```
+
+```bash
+rm -rf ~/.distrobox-adv-br*
+```
+
+
 ## Suporte
 
 Havendo qualquer dificuldade no uso de ferramenta, forneça um issue e peça suporte no grupo oficial no [`Telegram`](https://t.me/advogados_linux).

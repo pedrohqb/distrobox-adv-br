@@ -17,6 +17,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 # Instalar SerproID
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_serproid.sh | sh ; fi"
 
+# Instalar Assinador Serpro
+init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_assinadorserpro.sh | sh ; fi"
+
 # Instalar Java (Zulu)
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_java.sh | sh ; fi"
 

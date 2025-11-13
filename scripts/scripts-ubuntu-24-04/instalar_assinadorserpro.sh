@@ -1,7 +1,7 @@
 #!/bin/bash
 # -------------------------------------------------------------
 # Script para Modificar e Instalar Assinador Serpro
-# Execute este script como root: sudo ./script_instalacao.sh
+# Execute este script como root
 # -------------------------------------------------------------
 
 # --- CONFIGURAÇÃO DE PACOTES E URLs ---
@@ -25,12 +25,6 @@ WORK_DIR="$DOWNLOAD_DIR/serpro-signer-work"
 
 # Garantir que o script pare em qualquer erro
 set -e
-
-echo "--- ⚙️ Preparação e Verificação de Permissões ---"
-if [[ $EUID -ne 0 ]]; then
-    echo "Este script deve ser executado como root (sudo)."
-    exit 1
-fi
 
 # Cria o diretório de trabalho e muda para ele
 mkdir -p "$DOWNLOAD_DIR"

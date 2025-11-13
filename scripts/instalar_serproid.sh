@@ -98,6 +98,27 @@ else
     echo "❌ AVISO: O diretório '$ETC_DIR' NÃO FOI ENCONTRADO, ignorando remoção."
 fi
 
+echo "--- 🗑️ 4d. Excluir Scripts postinst e postrm ---"
+POSTINST_FILE="$WORK_DIR/DEBIAN/postinst"
+POSTRM_FILE="$WORK_DIR/DEBIAN/postrm"
+
+# Remove o arquivo postinst se existir
+if [ -f "$POSTINST_FILE" ]; then
+    rm -f "$POSTINST_FILE"
+    echo "✅ Arquivo **postinst** removido."
+else
+    echo "❌ AVISO: Arquivo postinst NÃO ENCONTRADO, ignorando remoção."
+fi
+
+# Remove o arquivo postrm se existir
+if [ -f "$POSTRM_FILE" ]; then
+    rm -f "$POSTRM_FILE"
+    echo "✅ Arquivo **postrm** removido."
+else
+    echo "❌ AVISO: Arquivo postrm NÃO ENCONTRADO, ignorando remoção."
+fi
+# --------------------------------------------------
+
 # Remove o arquivo md5sums para forçar o recálculo pelo dpkg-deb.
 MD5SUMS_FILE="$WORK_DIR/DEBIAN/md5sums"
 if [ -f "$MD5SUMS_FILE" ]; then

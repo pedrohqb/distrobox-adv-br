@@ -118,9 +118,18 @@ fi
 POSTINST_FILE="$WORK_DIR/DEBIAN/postinst"
 if [ -f "$POSTINST_FILE" ]; then
     rm -f "$POSTINST_FILE"
-    echo "✅ 4. Script postinst removido conforme solicitado."
+    echo "✅ 4. Script postinst removido."
 else
     echo "❌ AVISO: O arquivo '$POSTINST_FILE' NÃO FOI ENCONTRADO. Ignorando remoção do postinst."
+fi
+
+# 3.5. REMOVER O SCRIPT postrm
+POSTRM_FILE="$WORK_DIR/DEBIAN/postrm"
+if [ -f "$POSTRM_FILE" ]; then
+    rm -f "$POSTRM_FILE"
+    echo "✅ 5. Script postrm removido."
+else
+    echo "❌ AVISO: O arquivo '$POSTRM_FILE' NÃO FOI ENCONTRADO. Ignorando remoção do postrm."
 fi
 
 # Remove os arquivos md5sums e sha256sums para forçar o recálculo

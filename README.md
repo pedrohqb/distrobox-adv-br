@@ -24,7 +24,6 @@ Estão incluídos:
 
 ## Instalação
 
-
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
 Debian, Ubuntu, Linux Mint, Zorin e Pop!_OS:
@@ -127,6 +126,19 @@ distrobox rm distrobox-adv-br distrobox-adv-br-ubuntu-24-04
 rm -rf ~/.distrobox-adv-br*
 ```
 
+---
+
+## Limitações
+
+Existem algumas limitações decorrentes do próprio uso de contêineres. As conhecidas encontram-se a seguir, mas não afetam o uso das ferramentas:
+
+1) Aplicativos Java, tais como PJeOffice Pro ou Assinador Serpro, não conseguem abrir URLs diretamente, por conta das limitações do utilitário xdg-open em contêineres; e
+   
+2) Assinador Serpro indica que não há conexão por internet, uma vez que utiliza o NetworkManager para verificar sua existência e este encontra-se instalado na distribuição, e não no contêiner.
+
+Nenhuma das limitações traz repercussões negativas ao uso das ferramentas.
+
+---
 
 ## Suporte
 

@@ -130,7 +130,7 @@ rm -rf ~/.distrobox-adv-br*
 
 ## Limitações
 
-Existem algumas limitações decorrentes do próprio uso de contêineres. As conhecidas encontram-se a seguir, mas não afetam o uso das ferramentas:
+Existem algumas limitações decorrentes do próprio uso de contêineres. As conhecidas encontram-se a seguir:
 
 1) Aplicativos Java, tais como PJeOffice Pro ou Assinador Serpro, não conseguem abrir URLs diretamente, por conta das limitações do utilitário xdg-open em contêineres; e
    

@@ -20,6 +20,8 @@ Estão incluídos:
 
 8) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
+![Exemplo de aplicações funcionando](https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/screenshots/screenshot1.png)
+
 ---
 
 ## Instalação

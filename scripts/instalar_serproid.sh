@@ -74,8 +74,14 @@ echo "--- 📝 4b. Modificar Arquivo .desktop ---"
 FULL_DESKTOP_FILE="$WORK_DIR/$DESKTOP_FILE"
 
 if [ -f "$FULL_DESKTOP_FILE" ]; then
+    # 1. Altera a linha Icon=...
     sed -i 's|^Icon=.*|Icon=SerproID|g' "$FULL_DESKTOP_FILE"
     echo "✅ Arquivo .desktop modificado para usar **Icon=SerproID**."
+    
+    # 2. Adiciona a linha StartupWMClass=smartcert.Main ao FINAL do arquivo (usando $a\)
+    # $ no sed representa a última linha. a\ anexa o texto após essa linha.
+    sed -i '$a\StartupWMClass=smartcert.Main' "$FULL_DESKTOP_FILE"
+    echo "✅ Linha **StartupWMClass=smartcert.Main** adicionada ao **fim** do arquivo .desktop."
 else
     echo "❌ ERRO: Arquivo .desktop ($DESKTOP_FILE) NÃO ENCONTRADO. Abortando."
     rm -rf "$WORK_DIR"

@@ -101,10 +101,10 @@ echo "✅ Link simbólico criado: **$LINK_NAME** -> **$TARGET**."
 cd "$DOWNLOAD_DIR"
 # --------------------------------------------------
 
-echo "--- 🗑️ 4d. Excluir Diretório 'etc' Vazio ---"
+echo "--- 🗑️ 4d. Excluir Diretório 'etc' ---"
 ETC_DIR="$WORK_DIR/etc"
 if [ -d "$ETC_DIR" ]; then
-    # Remove o diretório etc/ e todo o seu conteúdo (que deve ser apenas etc/xdg/autostart/*)
+    # Remove o diretório etc/ e todo o seu conteúdo
     rm -rf "$ETC_DIR"
     echo "✅ Diretório '$ETC_DIR' (e seu conteúdo) removido conforme solicitado."
 else

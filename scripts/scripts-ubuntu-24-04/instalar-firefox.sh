@@ -22,4 +22,4 @@ apt update && \
 # 4. Instala ou atualiza o pacote 'firefox'.
 # Devido à regra de Pin-Priority 501, a versão instalada será a do PPA oficial.
 # O '-y' confirma automaticamente a instalação.
-apt install firefox-esr firefox-esr-locale-pt -y
+apt install firefox firefox-locale-pt -y

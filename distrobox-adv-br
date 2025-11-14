@@ -4,7 +4,7 @@ image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr firefox-esr-l10n-pt-br okular libnss3-tools"
+additional_packages="firefox-esr firefox-esr-l10n-pt-br libnss3-tools"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 
@@ -48,4 +48,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox-esr tokenadmin okular pjeoffice-pro serproid assinador-serpro"
+exported_apps="firefox-esr tokenadmin pjeoffice-pro serproid assinador-serpro"

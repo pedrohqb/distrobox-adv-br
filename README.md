@@ -12,13 +12,15 @@ Estão incluídos:
   
 4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    
-5) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
+5) Assinador Serpro, utilizado para assinar documentos com certificado digital ou validar documentos já assinados;
    
-6) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
+6) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
-7) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
+7) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
+   
+8) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-8) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+9) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ---
 
@@ -92,10 +94,41 @@ Os token SafeNet e Safesign já estão habilitados no Firefox; o certificado na 
 Para configurar o certificado SerproID no plugin do Lacuna Webpki, Softplan Websigner e Certisign WebSigner, deve-se aplicar as orientações a seguir:
 
 1) Abrir o plugin no Firefox;
+   
 2) Acessar a aba "Cripto Dispositivos";
+   
 3) Em "Opções personalizadas", no campo "Nome do arquivo SO (com extensão), adicionar "/lib/libneoidp11.so" (sem aspas) e apertar o sinal de "+".
 
 ---
+
+## Configuração Assinador Serpro
+
+Para configurar o Assinador Serpro, deve-se aplicar as orientações a seguir:
+
+1) Acessar a opção "Configurações" no aplicativo;
+   
+2) Acessar a aba "Carregar Driver";
+   
+3) Selecionar "Carregar driver local" e clicar em "Selecionar arquivo (.so ou .dll);
+  
+4) Abrir o arquivo /lib/libneoidp11.so, se for utilizar o certificado do SerproID; o arquivo /lib/libaetpkss.so, se for utilizar token SafeSign; ou o /lib/libeToken.so, se for utilizar token Safenet.
+
+5) Pressionar "Salvar".
+   
+---
+
+## Desinstalação
+
+Para desinstalar (inclusive para  fazer uma reinstalação limpa), basta rodar os seguintes comandos:
+
+```bash
+distrobox rm distrobox-adv-br distrobox-adv-br-ubuntu-24-04
+```
+
+```bash
+rm -rf ~/.distrobox-adv-br*
+```
+
 
 ## Suporte
 

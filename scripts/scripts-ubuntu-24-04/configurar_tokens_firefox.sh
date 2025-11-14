@@ -10,24 +10,24 @@ CAMINHO_SAFENET="/usr/lib/libeToken.so"
 NOME_SAFENET="SafeNet"
 
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
-echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-esr)..."
-firefox-esr --headless --new-tab about:blank &
+echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-release)..."
+firefox --headless --new-tab about:blank &
 
 # Espera por 6 segundos para o Firefox criar os arquivos do perfil
 sleep 6
 
 # Mata todos os processos do Firefox para garantir que o navegador esteja fechado
-pkill -f firefox-esr
+pkill -f firefox
 echo "Processo do Firefox encerrado."
 echo "---"
 
 # --- Passo 2: Encontrar o diretório do perfil recém-criado ---
-# Procura por perfis que terminam com "default-esr"
-CAMINHO_DO_PERFIL=$(find ~/.mozilla/firefox-esr -maxdepth 1 -type d -name "*.default-esr*")
+# Procura por perfis que terminam com "default-release"
+CAMINHO_DO_PERFIL=$(find ~/.mozilla/firefox -maxdepth 1 -type d -name "*.default-release")
 
 # Verifica se o perfil foi encontrado
 if [ -z "$CAMINHO_DO_PERFIL" ]; then
-    echo "Erro: Não foi possível encontrar um perfil default-esr. A operação foi abortada."
+    echo "Erro: Não foi possível encontrar um perfil default. A operação foi abortada."
     exit 1
 fi
 

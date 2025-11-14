@@ -17,10 +17,8 @@ Estão incluídos:
 6) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
 7) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
-   
-8) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-9) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+8) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ---
 

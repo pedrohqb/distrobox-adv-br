@@ -82,7 +82,26 @@ else
     exit 1
 fi
 
-echo "--- 🗑️ 4c. Excluir Diretório 'etc' Vazio ---"
+# --------------------------------------------------
+echo "--- 🔗 4c. Criar Link Simbólico (libneoidp11.so) ---"
+# O link é criado dentro do diretório de trabalho, no caminho que será instalado (/usr/lib)
+# O TARGET é o arquivo existente: /usr/lib/libserproidp11.so
+# O LINK_NAME é o novo link: /usr/lib/libneoidp11.so
+TARGET="libserproidp11.so"
+LINK_NAME="$WORK_DIR/usr/lib/libneoidp11.so"
+
+# Entra no diretório onde o link simbólico deve ser criado (dentro do WORK_DIR)
+cd "$WORK_DIR/usr/lib"
+
+# Cria o link simbólico. O target é relativo ao diretório /usr/lib
+ln -s "$TARGET" "libneoidp11.so"
+echo "✅ Link simbólico criado: **$LINK_NAME** -> **$TARGET**."
+
+# Volta para o diretório de download
+cd "$DOWNLOAD_DIR"
+# --------------------------------------------------
+
+echo "--- 🗑️ 4d. Excluir Diretório 'etc' Vazio ---"
 ETC_DIR="$WORK_DIR/etc"
 if [ -d "$ETC_DIR" ]; then
     # Remove o diretório etc/ e todo o seu conteúdo (que deve ser apenas etc/xdg/autostart/*)
@@ -92,7 +111,7 @@ else
     echo "❌ AVISO: O diretório '$ETC_DIR' NÃO FOI ENCONTRADO, ignorando remoção."
 fi
 
-echo "--- 🗑️ 4d. Excluir Scripts postinst e postrm ---"
+echo "--- 🗑️ 4e. Excluir Scripts postinst e postrm ---"
 POSTINST_FILE="$WORK_DIR/DEBIAN/postinst"
 POSTRM_FILE="$WORK_DIR/DEBIAN/postrm"
 

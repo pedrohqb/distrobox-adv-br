@@ -2,10 +2,9 @@
 # Script de Instalação do PJeOffice
 
 # Variáveis
-URL_PJEOFFICE="https://github.com/pedrohqb/pje-office-debian/releases/download/2.5.16u-1/pje-office_2.5.16u-1_amd64.deb"
-ARQUIVO_DEB="${HOME}/Downloads/pje-office_2.5.16u-1_amd64.deb"
+URL_PJEOFFICE="https://github.com/pedrohqb/pje-office-debian/releases/download/2.5.16u-2/pje-office_2.5.16u-2_amd64.deb"
 # SHA256 do arquivo DEB
-CHECKSUM_PJEOFFICE="47f1bfe903f06a40b0287e57fa692f8d8fbe82541f582b9b298de1dd3e1bf4e5"
+CHECKSUM_PJEOFFICE="02ee084b311027900f2b79ee8c73e3aa8fb91dfb509e3f7e75c144c37166fe07"
 
 echo "Baixando PJeOffice..."
 wget -P "${HOME}/Downloads" "${URL_PJEOFFICE}"

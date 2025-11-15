@@ -4,7 +4,7 @@ image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr firefox-esr-l10n-pt-br libnss3-tools"
+additional_packages="firefox-esr firefox-esr-l10n-pt-br libnss3-tools gvfs"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 

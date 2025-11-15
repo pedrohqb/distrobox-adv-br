@@ -17,15 +17,14 @@ Estão incluídos:
 6) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
 7) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
-   
-8) Okular, utilizado para visualização e assinatura digital de documentos em pdf; e
 
-9) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+8) Firefox, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
+
+![Exemplo de aplicações funcionando](https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/screenshots/screenshot1.png)
 
 ---
 
 ## Instalação
-
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
@@ -129,6 +128,17 @@ distrobox rm distrobox-adv-br distrobox-adv-br-ubuntu-24-04
 rm -rf ~/.distrobox-adv-br*
 ```
 
+---
+
+## Limitações
+
+Existem algumas limitações decorrentes do próprio uso de contêineres. As conhecidas encontram-se a seguir:
+   
+1) Assinador Serpro indica que não há conexão por internet. Trata-se de falso positivo, uma vez que a integração com outros sistemas funciona normalmente.
+
+Nenhuma das limitações traz repercussões negativas ao uso das ferramentas.
+
+---
 
 ## Suporte
 

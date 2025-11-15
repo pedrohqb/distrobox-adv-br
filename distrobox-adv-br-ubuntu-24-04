@@ -4,7 +4,7 @@ image=docker.io/library/ubuntu:24.04
 home=~/.distrobox-adv-br-ubuntu-24-04
 
 # Instalar pacotes adicionais do sistema
-additional_packages="libnss3-tools software-properties-common"
+additional_packages="libnss3-tools software-properties-common gvfs"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 

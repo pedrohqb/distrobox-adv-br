@@ -133,10 +133,8 @@ rm -rf ~/.distrobox-adv-br*
 ## Limitações
 
 Existem algumas limitações decorrentes do próprio uso de contêineres. As conhecidas encontram-se a seguir:
-
-1) Aplicativos Java, tais como PJeOffice Pro ou Assinador Serpro, não conseguem abrir URLs diretamente por conta das limitações do utilitário xdg-open em contêineres; e
    
-2) Assinador Serpro indica que não há conexão por internet, uma vez que utiliza o NetworkManager para verificar sua existência e este encontra-se instalado na distribuição, e não no contêiner. Trata-se de falso positivo, uma vez que a integração com outros sistemas funciona normalmente.
+1) Assinador Serpro indica que não há conexão por internet. Trata-se de falso positivo, uma vez que a integração com outros sistemas funciona normalmente.
 
 Nenhuma das limitações traz repercussões negativas ao uso das ferramentas.
 

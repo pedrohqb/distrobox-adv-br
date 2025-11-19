@@ -62,3 +62,6 @@ fi
 
 echo "---"
 echo "Operação concluída. Verifique os resultados acima."
+
+# Adicionar diretório SerproID
+mkdir -p ~/.config/serproid/certificados

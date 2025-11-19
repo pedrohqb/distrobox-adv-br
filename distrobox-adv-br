@@ -54,4 +54,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox-esr tokenadmin pjeoffice-pro serproid assinador-serpro"
+exported_apps="firefox-esr chromium tokenadmin pjeoffice-pro serproid assinador-serpro"

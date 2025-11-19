@@ -41,6 +41,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 # Configurar tokens no Firefox
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"
 
+# Configurar tokens no Chromium
+init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_chromium.sh | sudo -u $USER sh ; fi"
+
 # Fazer link simbólico da pasta "Downloads" do usuário na "home" do distrobox-adv-br
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobox-adv-br/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br/ ; fi"
 

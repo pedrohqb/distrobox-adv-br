@@ -4,7 +4,7 @@ image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr firefox-esr-l10n-pt-br libnss3-tools gvfs"
+additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n libnss3-tools gvfs"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 
@@ -16,6 +16,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 
 # Instalar SerproID
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_serproid.sh | sh ; fi"
+
+# Adicionar diretório do SerproID
+init_hooks="if [ ! -f /root/.first_run_complete ]; then sudo -u $USER mkdir -p ${HOME}/.distrobox-adv-br/.config/serproid/certificados ; fi"
 
 # Instalar Assinador Serpro
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_assinadorserpro.sh | sh ; fi"
@@ -38,6 +41,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 # Configurar tokens no Firefox
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_firefox.sh | sudo -u $USER sh ; fi"
 
+# Configurar tokens no Chromium
+init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/configurar_tokens_chromium.sh | sudo -u $USER sh ; fi"
+
 # Fazer link simbólico da pasta "Downloads" do usuário na "home" do distrobox-adv-br
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobox-adv-br/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br/ ; fi"
 
@@ -48,4 +54,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox-esr tokenadmin pjeoffice-pro serproid assinador-serpro"
+exported_apps="firefox-esr chromium tokenadmin pjeoffice-pro serproid assinador-serpro"

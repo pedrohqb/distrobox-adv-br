@@ -17,6 +17,9 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 # Instalar SerproID
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_serproid.sh | sh ; fi"
 
+# Adicionar diretório do SerproID
+init_hooks="if [ ! -f /root/.first_run_complete ]; then sudo -u $USER mkdir -p ${HOME}/.distrobox-adv-br-ubuntu-24-04/.config/serproid/certificados ; fi"
+
 # Instalar Assinador Serpro
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/scripts-ubuntu-24-04/instalar_assinadorserpro.sh | sh ; fi"
 

@@ -2,6 +2,8 @@
 
 Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em quase qualquer distribuição de Linux recente. 
 
+**OBS**: O suporte a Ubuntu 24.04 LTS e distribuições derivadas - tais como o Linux Mint (versão Ubuntu), ZorinOS ou Pop!_OS -, foi removido em razão das limitações no empacotamento do Firefox e Chromium, que levavam a criação do contêiner a falhar. O suporte a Ubuntu LTS e distribuições derivadas deve voltar assim que Ubuntu 26.04 LTS for lançado. Até lá, a recomendação é instalar os pacotes diretamente no sistema.
+
 Estão incluídos:
 
 1) Driver denominado Safesign necessário para uso do token GD Burti, atualmente o mais utilizado pela advocacia;
@@ -53,9 +55,7 @@ openSUSE Tumbleweed:
 sudo zypper in distrobox podman pcsc-ccid
 ```
 
-**OBS1:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
-
-**OBS2**: O suporte a Ubuntu 24.04 LTS e distribuições derivadas - tais como o Linux Mint (versão Ubuntu), ZorinOS ou Pop!_OS -, foi removido em razão das limitações no empacotamento do Firefox e Chromium, que levavam a criação do contêiner a falhar. O suporte a Ubuntu LTS e distribuições derivadas deve voltar assim que Ubuntu 26.04 LTS for lançado. Até lá, a recomendação é instalar os pacotes diretamente no sistema.
+**OBS:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
 
 
 2. Habilitar o pcsc-lite no sistema caso já não esteja:

@@ -30,16 +30,12 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian, Ubuntu, Linux Mint, MX Linux, Zorin OS e Pop!_OS:
+**OBS**: O suporte a Ubuntu 24.04 LTS e distribuições derivadas - tais como o Linux Mint (versão Ubuntu), ZorinOS ou Pop!_OS -, foi removido em razão das limitações no empacotamento do Firefox e Chromium, que levava a criação do contêiner a falhar. O suporte a Ubuntu LTS e distribuições derivadas deve voltar assim que Ubuntu 26.04 LTS for lançado. Até lá, a recomendação é instalar os pacotes diretamente no sistema.
+
+Debian (13 ou superior), Ubuntu (25.10 ou superior), Linux Mint Debian Edition (7 ou superior) e MX Linux (25 ou superior):
 
 ```bash
 sudo apt install pcscd libccid distrobox podman
-```
-
-**OBS:**: Se sua distribuição for Ubuntu 24.04 ou derivada, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS, é necessário antes instalar o PPA do distrobox, uma vez que a versão da distribuição está desatualizada:
-
-```bash
-sudo add-apt-repository ppa:michel-slm/distrobox -y
 ```
 
 Fedora Workstation e KDE Plasma:
@@ -47,6 +43,7 @@ Fedora Workstation e KDE Plasma:
 ```bash
 sudo dnf install distrobox podman
 ```
+
 Arch Linux:
   
 ```bash
@@ -68,16 +65,8 @@ sudo systemctl enable --now pcscd.service
 
 3. Instalar o distrobox-adv-br mediante o comando abaixo:
 
-Para distribuições em geral:
-
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
-```
-
-Para Ubuntu 24.04 ou distribuições derivadas, tais com Linux Mint (versão principal), Zorin OS e Pop!_OS, bem como Bluefin LTS (baseado em CentOS):
-
-```bash
-distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-24-04
 ```
 
 ---
@@ -123,11 +112,11 @@ Para configurar o Assinador Serpro, deve-se aplicar as orientações a seguir:
 Para desinstalar (inclusive para  fazer uma reinstalação limpa), basta rodar os seguintes comandos:
 
 ```bash
-distrobox rm distrobox-adv-br distrobox-adv-br-ubuntu-24-04
+distrobox rm distrobox-adv-br
 ```
 
 ```bash
-rm -rf ~/.distrobox-adv-br*
+rm -rf ~/.distrobox-adv-br
 ```
 
 ---

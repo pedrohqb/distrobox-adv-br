@@ -17,7 +17,7 @@ firefox-esr --headless --new-tab about:blank &
 sleep 6
 
 # Mata todos os processos do Firefox para garantir que o navegador esteja fechado
-pkill -f firefox-esr
+pkill -f firefox-esr > /dev/null 2>&1
 echo "Processo do Firefox encerrado."
 echo "---"
 

@@ -38,13 +38,13 @@ Debian (13 ou superior), Ubuntu (25.10 ou superior), Linux Mint Debian Edition (
 sudo apt install pcscd libccid distrobox podman
 ```
 
-Fedora Workstation e KDE Plasma:
+Fedora (Workstation e KDE Plasma):
 
 ```bash
 sudo dnf install distrobox podman
 ```
 
-Arch Linux:
+Arch Linux, Manjaro, BigLinux, EndeavourOS e CachyOS:
   
 ```bash
 pacman -S distrobox podman pcsclite ccid

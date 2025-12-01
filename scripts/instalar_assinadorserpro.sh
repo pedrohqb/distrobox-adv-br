@@ -92,9 +92,15 @@ fi
 # 3.2. Alterar o arquivo .desktop
 FULL_DESKTOP_FILE="$WORK_DIR/$DESKTOP_FILE"
 if [ -f "$FULL_DESKTOP_FILE" ]; then
-    # Altera Icon=... para Icon=serpro-signer
+    # 1. Altera Icon=... para Icon=serpro-signer
     sed -i 's|^Icon=.*|Icon=serpro-signer|g' "$FULL_DESKTOP_FILE"
-    echo "✅ 2. Arquivo .desktop alterado para usar **Icon=serpro-signer**."
+    echo "✅ 2a. Arquivo .desktop alterado para usar **Icon=serpro-signer**."
+    
+    # 2. Adiciona a linha Categories=Office; no FIM do arquivo
+    # Usa '$a' para anexar a linha no final do arquivo
+    sed -i '$aCategories=Office;' "$FULL_DESKTOP_FILE"
+    
+    echo "✅ 2b. A linha **Categories=Office;** foi adicionada diretamente ao fim do arquivo .desktop."
 else
     echo "❌ AVISO: Arquivo .desktop ($DESKTOP_FILE) NÃO FOI ENCONTRADO."
 fi

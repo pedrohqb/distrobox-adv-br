@@ -5,7 +5,7 @@
 # -------------------------------------------------------------
 
 # --- CONFIGURAÇÃO DE PACOTES E URLs ---
-SERPRO_URL="https://assinadorserpro.estaleiro.serpro.gov.br/downloads/4.3.2/assinador-serpro_4.3.2_amd64.deb"
+SERPRO_URL="https://assinadorserpro.estaleiro.serpro.gov.br/downloads/4.3.3/assinador-serpro_4.3.3_amd64.deb"
 LIBGTK_MOD_URL="http://ftp.br.debian.org/debian/pool/main/libc/libcanberra/libcanberra-gtk-module_0.30-10_amd64.deb"
 LIBGTK0_URL="http://ftp.br.debian.org/debian/pool/main/libc/libcanberra/libcanberra-gtk0_0.30-10_amd64.deb"
 
@@ -15,7 +15,7 @@ LIBGTK0_DEB=$(basename $LIBGTK0_URL)
 MODIFIED_SERPRO_DEB="${SERPRO_DEB%.deb}_modificado.deb"
 
 # **HASHES SHA256 REAIS**
-SERPRO_SHA="0fc4b76549bf82281c43de443a3beefef7059d853b2b1846a410eb543488fe0c"
+SERPRO_SHA="abcba94ee94a39f30e0dca054a652b2a3d01f611bdb749c47d15d1411cf92132"
 LIBGTK_MOD_SHA="03c13cdc30c38194159dec3fe7ea075345fcaa8d4c8327c9fd8b98231bbf4175"
 LIBGTK0_SHA="249ac8fe26366a102a8d7e84b81e1927772a086c09e62f374739ddd153cc54f2"
 

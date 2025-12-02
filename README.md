@@ -2,7 +2,7 @@
 
 Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em distribuições populares e recentes de Linux. 
 
-**OBS**: A distribuições suportadas são Debian, Linux Mint Debian Edition (LMDE), MX Linux, Fedora (Workstation e KDE Plasma), Bluefin, Aurora, Arch Linux, Manjaro, BigLinux, EndeavourOS, CachyOS e openSUSE Tumbleweed. **Não há suporte a Ubuntu nem a distribuições derivadas (p.e., Zorin OS, Pop!_OS, Linux Mint, etc.)**, seja por conta da dificuldade de lidar com snaps, seja por conta dos pacotes desatualizados que afetam o funcionamento do contêiner.
+**OBS**: A distribuições suportadas são Debian, Linux Mint Debian Edition (LMDE), MX Linux, Fedora, Bluefin, Aurora, Arch Linux, Manjaro, BigLinux, EndeavourOS, CachyOS e openSUSE Tumbleweed. **Não há suporte a Ubuntu nem a distribuições derivadas (p.e., Zorin OS, Pop!_OS, Linux Mint, etc.)**, seja por conta da dificuldade de lidar com snaps, seja por conta dos pacotes desatualizados que afetam o funcionamento do contêiner.
 
 Estão incluídos:
 
@@ -38,7 +38,7 @@ Debian, Linux Mint Debian Edition e MX Linux:
 sudo apt install pcscd libccid distrobox podman
 ```
 
-Fedora (Workstation e KDE Plasma):
+Fedora:
 
 ```bash
 sudo dnf install distrobox podman
@@ -47,16 +47,16 @@ sudo dnf install distrobox podman
 Arch Linux, Manjaro, BigLinux, EndeavourOS e CachyOS:
   
 ```bash
-pacman -S distrobox podman pcsclite ccid
+sudo pacman -S distrobox podman pcsclite ccid
 ```
 
 openSUSE Tumbleweed:
+
 ```bash
 sudo zypper in distrobox podman pcsc-ccid
 ```
 
 **OBS:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
-
 
 2. Habilitar o pcsc-lite no sistema caso já não esteja:
    

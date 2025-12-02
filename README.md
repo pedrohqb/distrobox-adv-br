@@ -32,7 +32,7 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian (13 ou superior), Ubuntu (25.10 ou superior), Linux Mint Debian Edition (7 ou superior) e MX Linux (25 ou superior):
+Debian, Ubuntu, Linux Mint Debian Edition e MX Linux:
 
 ```bash
 sudo apt install pcscd libccid distrobox podman

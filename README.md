@@ -1,8 +1,8 @@
 # Distrobox-adv-br
 
-Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em distribuições de Linux recentes. 
+Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em distribuições populares e recentes de Linux. 
 
-**OBS**: Não há suporte a Ubuntu nem a distribuições derivadas (p.e., Zorin OS, Pop!_OS, Linux Mint, etc.), seja por conta da dificuldade de lidar com snaps, seja por conta dos pacotes desatualizados que afetam o funcionamento do contêiner. A recomendação é utilizar distribuições baseadas em Debian, especialmente o Linux Mint Debian Edition (LMDE).
+**OBS**: A distribuições suportadas são Debian, Linux Mint Debian Edition (LMDE), MX Linux, Fedora (Workstation e KDE Plasma), Bluefin, Aurora, Arch Linux, Manjaro, BigLinux, EndeavourOS, CachyOS e openSUSE Tumbleweed. **Não há suporte a Ubuntu nem a distribuições derivadas (p.e., Zorin OS, Pop!_OS, Linux Mint, etc.)**, seja por conta da dificuldade de lidar com snaps, seja por conta dos pacotes desatualizados que afetam o funcionamento do contêiner.
 
 Estão incluídos:
 

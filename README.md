@@ -14,7 +14,7 @@ Estão incluídos:
   
 4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    
-5) Assinador Serpro, utilizado para assinar documentos com certificado digital ou validar documentos já assinados;
+5) Papers, utilizado para assinar documentos com certificado digital ou validar documentos já assinados;
    
 6) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    

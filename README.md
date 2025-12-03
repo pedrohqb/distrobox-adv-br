@@ -1,8 +1,8 @@
 # Distrobox-adv-br
 
-Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em quase qualquer distribuição de Linux recente. 
+Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em distribuições populares e recentes de Linux. 
 
-**OBS**: O suporte a Ubuntu 24.04 LTS e distribuições derivadas - tais como o Linux Mint (versão Ubuntu), ZorinOS ou Pop!_OS -, foi removido em razão das limitações no empacotamento do Firefox e Chromium, que levavam a criação do contêiner a falhar. O suporte a Ubuntu LTS e distribuições derivadas deve voltar assim que Ubuntu 26.04 LTS for lançado. Até lá, a recomendação é instalar os pacotes diretamente no sistema.
+**OBS**: A distribuições suportadas são Debian, Linux Mint Debian Edition (LMDE), MX Linux, Fedora, Bluefin, Aurora, Arch Linux, Manjaro, BigLinux, EndeavourOS, CachyOS e openSUSE Tumbleweed. **Não há suporte a Ubuntu nem a distribuições derivadas (p.e., Zorin OS, Pop!_OS, Linux Mint, etc.)**, seja por conta da dificuldade de lidar com snaps, seja por conta dos pacotes desatualizados que afetam o funcionamento do contêiner.
 
 Estão incluídos:
 
@@ -14,7 +14,7 @@ Estão incluídos:
   
 4) PJeOffice Pro, utilizado para assinatura eletrônica de documentos do sistema PJe, fornecido pelo Conselho Nacional de Justiça - CNJ;
    
-5) Assinador Serpro, utilizado para assinar documentos com certificado digital ou validar documentos já assinados;
+5) Papers, utilizado para assinar documentos com certificado digital ou validar documentos já assinados;
    
 6) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
@@ -32,31 +32,31 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian (13 ou superior), Ubuntu (25.10 ou superior), Linux Mint Debian Edition (7 ou superior) e MX Linux (25 ou superior):
+Debian, Linux Mint Debian Edition e MX Linux:
 
 ```bash
 sudo apt install pcscd libccid distrobox podman
 ```
 
-Fedora Workstation e KDE Plasma:
+Fedora:
 
 ```bash
 sudo dnf install distrobox podman
 ```
 
-Arch Linux:
+Arch Linux, Manjaro, BigLinux, EndeavourOS e CachyOS:
   
 ```bash
-pacman -S distrobox podman pcsclite ccid
+sudo pacman -S distrobox podman pcsclite ccid
 ```
 
 openSUSE Tumbleweed:
+
 ```bash
 sudo zypper in distrobox podman pcsc-ccid
 ```
 
 **OBS:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
-
 
 2. Habilitar o pcsc-lite no sistema caso já não esteja:
    
@@ -84,27 +84,12 @@ Os token SafeNet e Safesign já estão habilitados no Firefox; o certificado na 
 
 Para configurar o certificado SerproID no plugin do Lacuna Webpki, Softplan Websigner e Certisign WebSigner, deve-se aplicar as orientações a seguir:
 
-1) Abrir o plugin no Firefox;
+1) Abrir o plugin no Firefox ou Chrome;
    
 2) Acessar a aba "Cripto Dispositivos";
    
 3) Em "Opções personalizadas", no campo "Nome do arquivo SO (com extensão), adicionar "/lib/libneoidp11.so" (sem aspas) e apertar o sinal de "+".
 
----
-
-## Configuração Assinador Serpro
-
-Para configurar o Assinador Serpro, deve-se aplicar as orientações a seguir:
-
-1) Acessar a opção "Configurações" no aplicativo;
-   
-2) Acessar a aba "Carregar Driver";
-   
-3) Selecionar "Carregar driver local" e clicar em "Selecionar arquivo (.so ou .dll);
-  
-4) Abrir o arquivo /lib/libneoidp11.so, se for utilizar o certificado do SerproID; o arquivo /lib/libaetpkss.so, se for utilizar token SafeSign; ou o /lib/libeToken.so, se for utilizar token Safenet.
-
-5) Pressionar "Salvar".
    
 ---
 
@@ -119,16 +104,6 @@ distrobox rm distrobox-adv-br
 ```bash
 rm -rf ~/.distrobox-adv-br
 ```
-
----
-
-## Limitações
-
-Existem algumas limitações decorrentes do próprio uso de contêineres. As conhecidas encontram-se a seguir:
-   
-1) Assinador Serpro indica que não há conexão por internet. Trata-se de falso positivo, uma vez que a integração com outros sistemas funciona normalmente.
-
-Nenhuma das limitações traz repercussões negativas ao uso das ferramentas.
 
 ---
 

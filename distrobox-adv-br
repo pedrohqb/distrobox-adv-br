@@ -4,7 +4,7 @@ image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n libnss3-tools gvfs"
+additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n papers libnss3-tools gvfs"
 
 ## INSTALAR PACOTES ADICIONAIS ##
 
@@ -19,9 +19,6 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 
 # Adicionar diretório do SerproID
 init_hooks="if [ ! -f /root/.first_run_complete ]; then sudo -u $USER mkdir -p ${HOME}/.distrobox-adv-br/.config/serproid/certificados ; fi"
-
-# Instalar Assinador Serpro
-init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_assinadorserpro.sh | sh ; fi"
 
 # Instalar Java (Zulu)
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_java.sh | sh ; fi"
@@ -54,4 +51,4 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Exportar todos os aplicativos relevantes
-exported_apps="firefox-esr chromium tokenadmin pjeoffice-pro serproid assinador-serpro"
+exported_apps="firefox-esr chromium tokenadmin pjeoffice-pro serproid papers"

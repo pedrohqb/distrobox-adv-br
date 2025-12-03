@@ -107,16 +107,6 @@ rm -rf ~/.distrobox-adv-br
 
 ---
 
-## Limitações
-
-Existem algumas limitações decorrentes do próprio uso de contêineres. As conhecidas encontram-se a seguir:
-   
-1) Assinador Serpro indica que não há conexão por internet. Trata-se de falso positivo, uma vez que a integração com outros sistemas funciona normalmente.
-
-Nenhuma das limitações traz repercussões negativas ao uso das ferramentas.
-
----
-
 ## Suporte
 
 Havendo qualquer dificuldade no uso de ferramenta, forneça um issue e peça suporte no grupo oficial no [`Telegram`](https://t.me/advogados_linux).

@@ -90,21 +90,6 @@ Para configurar o certificado SerproID no plugin do Lacuna Webpki, Softplan Webs
    
 3) Em "Opções personalizadas", no campo "Nome do arquivo SO (com extensão), adicionar "/lib/libneoidp11.so" (sem aspas) e apertar o sinal de "+".
 
----
-
-## Configuração Assinador Serpro
-
-Para configurar o Assinador Serpro, deve-se aplicar as orientações a seguir:
-
-1) Acessar a opção "Configurações" no aplicativo;
-   
-2) Acessar a aba "Carregar Driver";
-   
-3) Selecionar "Carregar driver local" e clicar em "Selecionar arquivo (.so ou .dll);
-  
-4) Abrir o arquivo /lib/libneoidp11.so, se for utilizar o certificado do SerproID; o arquivo /lib/libaetpkss.so, se for utilizar token SafeSign; ou o /lib/libeToken.so, se for utilizar token SafeNet.
-
-5) Pressionar "Salvar".
    
 ---
 

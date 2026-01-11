@@ -67,7 +67,7 @@ sudo systemctl enable --now pcscd.service
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
 ```
-**OBS:** Se utilizar Ubuntu 24.04 LTS ou qualquer distribuição derivada, como Linux Mint 22, Zorin OS 18 ou Pop!_OS 24.04, bem como se utilizar Bluefin LTS, a instalação deve ser mediante o comando abaixo:
+**OBS:** Se utilizar Ubuntu 24.04 LTS ou qualquer distribuição derivada, como Linux Mint 22, Zorin OS 18 ou Pop!_OS 24.04, bem como se utilizar Bluefin LTS, a instalação deve ser feita mediante o comando abaixo:
 
 ```bash
 wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-legado && distrobox-assemble create --file $HOME/Downloads/distrobox-adv-br-legado

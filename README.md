@@ -1,4 +1,4 @@
-# Distrobox-adv-br
+# distrobox-adv-br
 
 Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em distribuições populares e recentes de Linux. 
 

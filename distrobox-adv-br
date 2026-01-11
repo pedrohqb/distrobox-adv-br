@@ -6,8 +6,6 @@ home=~/.distrobox-adv-br
 # Instalar pacotes adicionais do sistema
 additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n papers libnss3-tools gvfs"
 
-## INSTALAR PACOTES ADICIONAIS ##
-
 # Instalar Safesign
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_safesign.sh | sh ; fi"
 

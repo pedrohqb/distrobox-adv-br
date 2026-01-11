@@ -1,8 +1,6 @@
-# Distrobox-adv-br
+# distrobox-adv-br
 
 Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em distribuições populares e recentes de Linux. 
-
-**OBS**: A distribuições suportadas são Debian, Linux Mint Debian Edition (LMDE), MX Linux, Fedora, Bluefin, Aurora, Arch Linux, Manjaro, BigLinux, EndeavourOS, CachyOS e openSUSE Tumbleweed. **Não há suporte a Ubuntu nem a distribuições derivadas (p.e., Zorin OS, Pop!_OS, Linux Mint, etc.)**, seja por conta da dificuldade de lidar com snaps, seja por conta dos pacotes desatualizados que afetam o funcionamento do contêiner.
 
 Estão incluídos:
 
@@ -32,7 +30,7 @@ Estão incluídos:
 
 1. Primeiramente, é necessário instalar o distrobox e podman em sua distribuição, além dos pacotes pcsc-lite e ccid - caso já não os tenha -, necessários para que seu sistema possa acessar o token.
 
-Debian, Linux Mint Debian Edition e MX Linux:
+Debian, Ubuntu, Linux Mint e MX Linux:
 
 ```bash
 sudo apt install pcscd libccid distrobox podman
@@ -68,6 +66,11 @@ sudo systemctl enable --now pcscd.service
 
 ```bash
 distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br
+```
+**OBS:** Se utilizar Ubuntu 24.04 LTS ou qualquer distribuição derivada, como Linux Mint 22, Zorin OS 18 ou Pop!_OS 24.04, bem como se utilizar Bluefin LTS, a instalação deve ser feita mediante o comando abaixo:
+
+```bash
+wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-legado && distrobox-assemble create --file $HOME/Downloads/distrobox-adv-br-legado
 ```
 
 ---

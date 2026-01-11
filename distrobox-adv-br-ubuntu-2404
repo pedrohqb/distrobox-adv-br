@@ -7,7 +7,7 @@ home=~/.distrobox-adv-br
 additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n papers libnss3-tools gvfs"
 
 # Instalar pcsc-lite do Ubuntu 24.04
-init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_pcsc_ubuntu_2404.sh | sh ; fi"
+init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/ubuntu-2404/instalar_pcsc_ubuntu_2404.sh | sh ; fi"
 
 # Instalar Safesign
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_safesign.sh | sh ; fi"

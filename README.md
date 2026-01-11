@@ -70,7 +70,7 @@ distrobox-assemble create --file https://raw.githubusercontent.com/pedrohqb/dist
 **OBS:** Se utilizar Ubuntu 24.04 LTS ou qualquer distribuição derivada, como Linux Mint 22, Zorin OS 18 ou Pop!_OS 24.04, a instalação deve ser mediante o comando abaixo:
 
 ```bash
-wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-ubuntu-2404 && distrobox-assemble create --file $HOME/Downloads/distrobox-adv-br-ubuntu-2404
+wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/distrobox-adv-br-legado && distrobox-assemble create --file $HOME/Downloads/distrobox-adv-br-legado
 ```
 
 ---

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Script de configuração do locale pt_BR.UTF-8
 
 # 1. Verifica se o usuário é root
 if [ "$EUID" -ne 0 ]; then 

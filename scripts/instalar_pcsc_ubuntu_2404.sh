@@ -1,43 +1,61 @@
 #!/bin/bash
+# Script de Instalação do pcscd e libpcsclite1 do Ubuntu 24.04 (v2.0.3)
 
-# Verifica se o script está sendo executado como root
+# Verificação de privilégios de root
 if [ "$EUID" -ne 0 ]; then 
-  echo "Erro: Este script deve ser executado diretamente como root."
+  echo "Erro: Por favor, execute este script como root."
   exit 1
 fi
 
-# Variáveis dos pacotes
-URL_PCSCD="http://launchpadlibrarian.net/722181807/pcscd_2.0.3-1build1_amd64.deb"
+# Variáveis
+DIR_DOWNLOAD="${HOME}/Downloads"
 URL_LIBPCSC="http://launchpadlibrarian.net/722181806/libpcsclite1_2.0.3-1build1_amd64.deb"
-FILE_PCSCD="/tmp/pcscd_2.0.3_amd64.deb"
-FILE_LIBPCSC="/tmp/libpcsclite1_2.0.3_amd64.deb"
+URL_PCSCD="http://launchpadlibrarian.net/722181807/pcscd_2.0.3-1build1_amd64.deb"
 
-echo "----------------------------------------------------"
-echo "Iniciando instalação de pacotes pcsc (Versão 2.0.3)"
-echo "----------------------------------------------------"
+ARQUIVO_LIBPCSC="${DIR_DOWNLOAD}/libpcsclite1_2.0.3-1build1_amd64.deb"
+ARQUIVO_PCSCD="${DIR_DOWNLOAD}/pcscd_2.0.3-1build1_amd64.deb"
 
-# 1. Download dos arquivos para o diretório /tmp
-echo ">> Baixando pacotes..."
-wget -O "$FILE_PCSCD" "$URL_PCSCD"
-wget -O "$FILE_LIBPCSC" "$URL_LIBPCSC"
+# SHA256 dos arquivos
+CHECKSUM_LIBPCSC="561845811776949f50f44369a311140608643199c278912803b98c3979401824"
+CHECKSUM_PCSCD="8b0227918a0033d59664531868470a24d29e31980838634177b9666014457635"
 
-# 2. Atualização do índice e instalação local
-# O apt lida com as dependências automaticamente
-echo ">> Instalando pacotes e dependências..."
+# Garantir que o diretório de download existe
+mkdir -p "${DIR_DOWNLOAD}"
+
+echo "Baixando pacotes pcscd e libpcsclite1..."
+wget -P "${DIR_DOWNLOAD}" "${URL_LIBPCSC}"
+wget -P "${DIR_DOWNLOAD}" "${URL_PCSCD}"
+
+# Verificação de Checksum - libpcsclite1
+echo "Verificando checksum do libpcsclite1..."
+if ! echo "${CHECKSUM_LIBPCSC}  ${ARQUIVO_LIBPCSC}" | sha256sum -c --status; then
+    echo "ERRO: Checksum SHA256 do libpcsclite1 falhou!"
+    exit 1
+fi
+echo "Checksum do libpcsclite1 verificado com sucesso."
+
+# Verificação de Checksum - pcscd
+echo "Verificando checksum do pcscd..."
+if ! echo "${CHECKSUM_PCSCD}  ${ARQUIVO_PCSCD}" | sha256sum -c --status; then
+    echo "ERRO: Checksum SHA256 do pcscd falhou!"
+    exit 1
+fi
+echo "Checksum do pcscd verificado com sucesso."
+
+echo "Atualizando índices de pacotes..."
 apt update
-apt install -y "$FILE_LIBPCSC" "$FILE_PCSCD"
 
-# 3. Aplicando o hold para evitar atualizações futuras
-echo ">> Bloqueando atualizações (apt-mark hold)..."
-apt-mark hold pcscd libpcsclite1
+echo "Instalando pacotes..."
+apt install -y "${ARQUIVO_LIBPCSC}" "${ARQUIVO_PCSCD}"
 
-# 4. Verificação de sucesso
+echo "Configurando pacotes em hold (bloqueando upgrades)..."
+apt-mark hold libpcsclite1 pcscd
+
+echo "Limpando arquivos de instalação..."
+rm "${ARQUIVO_LIBPCSC}" "${ARQUIVO_PCSCD}"
+
 echo "----------------------------------------------------"
-echo "Status atual dos pacotes:"
+echo "Instalação concluída e pacotes travados (hold)."
+echo "Status atual:"
 apt-mark showhold | grep -E 'pcscd|libpcsclite1'
 echo "----------------------------------------------------"
-
-# Limpeza
-rm "$FILE_PCSCD" "$FILE_LIBPCSC"
-
-echo "Processo concluído."

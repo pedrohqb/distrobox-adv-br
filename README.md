@@ -110,6 +110,12 @@ rm -rf ~/.distrobox-adv-br
 
 ---
 
+## Problemas conhecidos
+
+O distrobox-adv-br não funciona com a distribuição openSUSE Leap 16.0, uma vez que esta oferece uma versão do pcsc-lite extramamente desatualizada.
+
+---
+
 ## Suporte
 
 Havendo qualquer dificuldade no uso de ferramenta, forneça um issue e peça suporte no grupo oficial no [`Telegram`](https://t.me/advogados_linux).

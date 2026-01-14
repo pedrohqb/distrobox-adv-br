@@ -54,7 +54,7 @@ openSUSE Tumbleweed:
 sudo zypper in distrobox podman pcsc-ccid
 ```
 
-**OBS:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
+**OBS:** Distribuições como Bluefin, Aurora e Bazzite já vêm com distrobox pré-instalado no sistema.
 
 2. Habilitar o pcsc-lite no sistema caso já não esteja:
    

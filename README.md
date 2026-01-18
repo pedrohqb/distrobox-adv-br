@@ -54,7 +54,7 @@ openSUSE Tumbleweed:
 sudo zypper in distrobox podman pcsc-ccid
 ```
 
-**OBS:** Distribuições como Bluefin e Aurora já vêm com distrobox pré-instalado no sistema.
+**OBS:** Distribuições como Bluefin, Aurora e Bazzite já vêm com distrobox pré-instalado no sistema.
 
 2. Habilitar o pcsc-lite no sistema caso já não esteja:
    
@@ -107,6 +107,16 @@ distrobox rm distrobox-adv-br
 ```bash
 rm -rf ~/.distrobox-adv-br
 ```
+
+---
+
+## Distribuições não suportadas
+
+1) openSUSE Leap 16.0, uma vez que esta oferece uma versão do pcsc-lite extremamente desatualizada (atualizado em 14.1.2026).
+   
+2) Solus, em razão de bugs no encompacotamento do distrobox (atualizado em 14.1.2026).
+   
+3) OpenMandriva, em razão de bugs no encompacotamento do distrobox (atualizado em 14.1.2026).
 
 ---
 

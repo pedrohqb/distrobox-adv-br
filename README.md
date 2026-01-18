@@ -112,7 +112,7 @@ rm -rf ~/.distrobox-adv-br
 
 ## Distribuições não suportadas
 
-1) openSUSE Leap 16.0, uma vez que esta oferece uma versão do pcsc-lite extramamente desatualizada (atualizado em 14.1.2026).
+1) openSUSE Leap 16.0, uma vez que esta oferece uma versão do pcsc-lite extremamente desatualizada (atualizado em 14.1.2026).
    
 2) Solus, em razão de bugs no encompacotamento do distrobox (atualizado em 14.1.2026).
    

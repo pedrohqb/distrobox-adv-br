@@ -6,6 +6,9 @@ home=~/.distrobox-adv-br
 # Definir shell como bash
 pre_init_hooks="export SHELL=/bin/bash;"
 
+# Garantir o funcionamento regular do PJeOffice do KDE Plasma e outros ambientes gráficos
+pre_init_hooks="export _JAVA_AWT_WM_NONREPARENTING=1"
+
 # Instalar pacotes adicionais do sistema
 additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n papers libnss3-tools gvfs"
 
@@ -44,9 +47,6 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 
 # Fazer link simbólico da pasta "Downloads" do usuário na "home" do distrobox-adv-br
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobox-adv-br/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br/ ; fi"
-
-# Adicionar parâmetro para garantir a funcionalidade do PJeOffice
-init_hooks="if [ ! -f /root/.first_run_complete ]; then sudo -u $USER echo 'export _JAVA_AWT_WM_NONREPARENTING=1' >> ${HOME}/.distrobox-adv-br/.bashrc ; fi"
 
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts ; fi"

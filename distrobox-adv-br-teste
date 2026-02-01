@@ -49,7 +49,7 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-ad
 init_hooks="touch /root/.first_run_complete"
 
 # Determinar o nome do "window manager" para garantir compatibilidade do PJeOffice
-init_hooks="sudo -u $USER wmname LG3D"
+init_hooks="wmname LG3D"
 
 # Exportar todos os aplicativos relevantes
 exported_apps="firefox-esr chromium tokenadmin pjeoffice-pro serproid papers"

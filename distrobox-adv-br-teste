@@ -3,8 +3,11 @@
 image=docker.io/library/debian:trixie
 home=~/.distrobox-adv-br
 
+# Definir shell como bash
+pre_init_hooks="export SHELL=/bin/bash;"
+
 # Instalar pacotes adicionais do sistema
-additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n papers libnss3-tools gvfs wmname"
+additional_packages="firefox-esr firefox-esr-l10n-pt-br chromium chromium-l10n papers libnss3-tools gvfs"
 
 # Instalar Safesign
 init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/scripts/instalar_safesign.sh | sh ; fi"
@@ -42,14 +45,14 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then curl https://raw.githubu
 # Fazer link simbólico da pasta "Downloads" do usuário na "home" do distrobox-adv-br
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobox-adv-br/Downloads && sudo -u $USER ln -s ${HOME}/Downloads/ ${HOME}/.distrobox-adv-br/ ; fi"
 
+# Adicionar parâmetro para garantir a funcionalidade do PJeOffice
+init_hooks="if [ ! -f /root/.first_run_complete ]; then sudo -u $USER echo 'export _JAVA_AWT_WM_NONREPARENTING=1' >> ${HOME}/.distrobox-adv-br/.bashrc ; fi"
+
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts ; fi"
 
 # Assegurar que a instalação dos pacotes adicionais não se repita
 init_hooks="touch /root/.first_run_complete"
-
-# Determinar o nome do "window manager" para garantir compatibilidade do PJeOffice
-init_hooks="wmname LG3D"
 
 # Exportar todos os aplicativos relevantes
 exported_apps="firefox-esr chromium tokenadmin pjeoffice-pro serproid papers"

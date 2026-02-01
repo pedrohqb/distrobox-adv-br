@@ -49,7 +49,7 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobo
 init_hooks="if [ ! -f /root/.first_run_complete ]; then sudo -u $USER echo 'export _JAVA_AWT_WM_NONREPARENTING=1' > ${HOME}/.distrobox-adv-br/.variavel-pjeoffice ; fi"
 
 # Abrir variável de ambiente para garantir o funcionamento regular do PJeOffice no KDE Plasma e em outros ambientes gráficos
-init_hooks="sudo -u $USER source ${HOME}/.distrobox-adv-br/.variavel-pjeoffice"
+init_hooks="sudo -u $USER source ${HOME}/.distrobox-adv-br/.variavel-pjeoffice ;"
 
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts ; fi"

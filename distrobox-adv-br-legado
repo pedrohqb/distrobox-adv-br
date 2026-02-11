@@ -51,7 +51,7 @@ init_hooks="if [ ! -f /root/.first_run_complete ]; then rm -rf ${HOME}/.distrobo
 # Limpeza pós-instalação
 init_hooks="if [ ! -f /root/.first_run_complete ]; then rm ${HOME}/.distrobox-adv-br/.wget-hsts ; fi"
 
-# Assegurar que a instalação dos pacotes adicionais não se repita
+# Assegurar que a configuração inicial não se repita
 init_hooks="touch /root/.first_run_complete ;"
 
 # Exportar todos os aplicativos relevantes

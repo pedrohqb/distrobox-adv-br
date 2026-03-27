@@ -118,7 +118,7 @@ rm -rf ~/.distrobox-adv-br
    
 3) OpenMandriva, em razão de bugs no encompacotamento do distrobox (atualizado em 14.1.2026).
 
-4) Void, em razão da falta de pacotes oficiais de Distrobox (atualizado em 11.2.2026).
+4) Void, em razão da falta de pacotes oficiais do distrobox (atualizado em 11.2.2026).
 
 ---
 

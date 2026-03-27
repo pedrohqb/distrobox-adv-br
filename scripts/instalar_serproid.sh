@@ -4,7 +4,7 @@
 # --- CONFIGURAÇÃO ---
 PACKAGE_NAME="serproid-desktop-2.1.6-amd64.deb"
 NEW_PACKAGE_NAME="${PACKAGE_NAME%.deb}_modificado.deb"
-URL="https://serprodrive.serpro.gov.br/s/Cc3EbToE9AFq4qX/download"
+URL="https://storagegw.estaleiro.serpro.gov.br/instalador-desktop/SerproID-2.1.6-amd64.deb"
 SHA256SUM="0ffa9ffe5bc343cc758a12f28bd7f08aec4b6e843d1c043baf0b81572461e588"
 
 # Arquivos a serem modificados

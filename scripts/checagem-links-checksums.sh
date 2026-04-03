@@ -12,7 +12,7 @@ echo -e "${BLUE}=== Iniciando Checagem dos Links e Checksums ===${NC}\n"
 # Nota: Alguns links usam redirecionamento, o curl com -L resolve isso.
 check_list=(
     "Certisign WebSigner|https://get.websignerplugin.com/Downloads/2.17.7/setup-deb-64|04981f073f61ac7e8662ec12f3d69be1cb8090131836935a111ef9d5b012abfb"
-    "Java Zulu 11|https://cdn.azul.com/zulu/bin/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb|1b5a3799dc5466137f3ef921d8e1ea50471aecbe895fdaf5afff8d722cfe3b37"
+    "Java Zulu 11|https://cdn.azul.com/zulu/bin/zulu11.86.21-ca-jdk11.0.30-linux_amd64.deb|2a8405edd1c5d297d7f5a91a90c200c3225ec8e08f853e49d2eea5e86f1c5c69"
     "PJeOffice|https://github.com/pedrohqb/pje-office-debian/releases/download/2.5.16u-3/pje-office_2.5.16u-3_amd64.deb|d91510730355ebb82cfc7a810a37840392fb25947422ce29ddf6f63a56775cc7"
     "SafeNet SAC|https://www.digicert.com/StaticFiles/Linux_SAC_10.9_GA.zip|46759cfe91d736af18a49d10e4749f264022db44e04ed4caf94e1ca77d6a013e"
     "SafeSign IC|https://assets.ctfassets.net/zuadwp3l2xby/6vGICRnQgQ8TkcHTgcouIr/5acf96dcbc0364aa9228606d3969ef97/SafeSignICStandardLinux4.5.0.0-AET.000ub2404x86_64.deb|7742e21e3141e51e307d7613b4046886bc7c4aa203835dcf5c43cd348f2a1b91"

@@ -22,9 +22,7 @@ fi
 echo "Checksum verificado com sucesso."
 
 echo "Instalando SafeSign..."
-# Usando sudo para garantir permissão de instalação
-sudo apt update
-sudo apt install -y "${ARQUIVO_DEB}"
+apt install -y "${ARQUIVO_DEB}"
 
 echo "Limpando arquivos temporários..."
 rm "${ARQUIVO_DEB}"

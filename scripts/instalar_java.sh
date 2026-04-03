@@ -2,10 +2,10 @@
 # Script de Instalação do Java Zulu 11
 
 # Variáveis
-URL_JAVA="https://cdn.azul.com/zulu/bin/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb"
-ARQUIVO_DEB="${HOME}/Downloads/zulu11.82.19-ca-jdk11.0.28-linux_amd64.deb"
+URL_JAVA="https://cdn.azul.com/zulu/bin/zulu11.86.21-ca-jdk11.0.30-linux_amd64.deb"
+ARQUIVO_DEB="${HOME}/Downloads/zulu11.86.21-ca-jdk11.0.30-linux_amd64.deb"
 # SHA256 do arquivo DEB
-CHECKSUM_JAVA="1b5a3799dc5466137f3ef921d8e1ea50471aecbe895fdaf5afff8d722cfe3b37"
+CHECKSUM_JAVA="2a8405edd1c5d297d7f5a91a90c200c3225ec8e08f853e49d2eea5e86f1c5c69"
 
 echo "Baixando Java Zulu 11..."
 wget -P "${HOME}/Downloads" "${URL_JAVA}"

@@ -17,7 +17,7 @@ check_list=(
     "SafeNet SAC|https://www.digicert.com/StaticFiles/Linux_SAC_10.9_GA.zip|46759cfe91d736af18a49d10e4749f264022db44e04ed4caf94e1ca77d6a013e"
     "SafeSign IC|https://assets.ctfassets.net/zuadwp3l2xby/6vGICRnQgQ8TkcHTgcouIr/5acf96dcbc0364aa9228606d3969ef97/SafeSignICStandardLinux4.5.0.0-AET.000ub2404x86_64.deb|7742e21e3141e51e307d7613b4046886bc7c4aa203835dcf5c43cd348f2a1b91"
     "SerproID|https://storagegw.estaleiro.serpro.gov.br/instalador-desktop/SerproID-2.1.6-amd64.deb|0ffa9ffe5bc343cc758a12f28bd7f08aec4b6e843d1c043baf0b81572461e588"
-    "Lacuna Web PKI|https://get.webpkiplugin.com/Downloads/2.14.0/setup-deb-64|79ba749827d4fc9afcbde6615d3bae0ff49ab32755d33dda6961a5f5de71d1a8"
+    "Lacuna Web PKI|https://get.webpkiplugin.com/Downloads/2.14.2/setup-deb-64|79ba749827d4fc9afcbde6615d3bae0ff49ab32755d33dda6961a5f5de71d1a8"
     "Softplan WebSigner|https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb|5da8fd36f1371f52bbaebede75fade1928f09cff2dd605b8da5663c6da505379"
 )
 

@@ -83,16 +83,19 @@ Os token SafeNet e Safesign já estão habilitados no Firefox; o certificado na 
 
 ---
 
-## Configuração SerproID
+## Configuração Lacuna Webpki, Softplan Websigner e Certisign WebSigner
 
-Para configurar o certificado SerproID no plugin do Lacuna Webpki, Softplan Websigner e Certisign WebSigner, deve-se aplicar as orientações a seguir:
+Para configurar o Lacuna Webpki, Softplan Websigner e Certisign WebSigner, é necessário seguir as instruções a seguir:
 
-1) Abrir o plugin no Firefox ou Chrome;
+1) Instalar no Firefox e/ou no Chromium o plugin para cada um deles acessando os seguintes sítios: a) https://get.webpkiplugin.com/, para Lacuna Webpki; b) https://websigner.softplan.com.br/, para Softplan Websigner; e c) https://get.websignerplugin.com/, para Certisign Websigner;
+  
+2) Abrir o plugin no Firefox ou Chromium;
+  
+3) Acessar a aba "Cripto Dispositivos";
    
-2) Acessar a aba "Cripto Dispositivos";
+4) Em "Dispositivos criptográficos (PKCS #11), habilitar as opções "Tokens SafeNet" e "Dispositivos SafeSign AET";
    
-3) Em "Opções personalizadas", no campo "Nome do arquivo SO (com extensão), adicionar "/lib/libneoidp11.so" (sem aspas) e apertar o sinal de "+".
-
+5)  Em "Opções personalizadas", no campo "Nome do arquivo SO (com extensão), adicionar "/lib/libneoidp11.so" (sem aspas) e apertar o sinal de "+".
    
 ---
 

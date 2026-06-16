@@ -6,7 +6,7 @@ URL_LACUNA="https://get.webpkiplugin.com/Downloads/2.14.2/setup-deb-64"
 ARQUIVO_DOWNLOAD="${HOME}/Downloads/setup-deb-64"
 ARQUIVO_DEB="${HOME}/Downloads/setup-deb-64.deb"
 # SHA256 do arquivo DEB
-CHECKSUM_LACUNA="79ba749827d4fc9afcbde6615d3bae0ff49ab32755d33dda6961a5f5de71d1a8"
+CHECKSUM_LACUNA="101ce29b391d74c5231cf96cd7e0e92e122202c0e5a609c33da2e50c8807cf18"
 
 echo "Baixando Lacuna Web PKI..."
 wget -P "${HOME}/Downloads" "${URL_LACUNA}"

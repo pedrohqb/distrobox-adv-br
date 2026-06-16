@@ -2,7 +2,7 @@
 # Script de Instalação do Softplan WebSigner
 
 # Variáveis
-URL_WEBSIGNER="https://websigner.softplan.com.br/Downloads/2.12.1/webpki-chrome-64-deb"
+URL_WEBSIGNER="https://websigner.softplan.com.br/Downloads/2.15.0/webpki-chrome-64-deb"
 ARQUIVO_DOWNLOAD="${HOME}/Downloads/webpki-chrome-64-deb"
 ARQUIVO_DEB="${HOME}/Downloads/webpki-chrome-64-deb.deb"
 # SHA256 do arquivo DEB

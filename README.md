@@ -36,10 +36,16 @@ Debian, Ubuntu, Linux Mint e MX Linux:
 sudo apt install pcscd libccid distrobox podman
 ```
 
-Fedora:
+Fedora tradicional (Workstation, KDE Plasma Desktop, etc.):
 
 ```bash
 sudo dnf install distrobox podman
+```
+
+Fedora atômico (Silverblue, Kinoite, etc.):
+
+```bash
+sudo rpm-ostree install distrobox
 ```
 
 Arch Linux, Manjaro, BigLinux, EndeavourOS e CachyOS:
@@ -61,6 +67,8 @@ sudo zypper in distrobox podman pcsc-ccid
 ```bash
 sudo systemctl enable --now pcscd.service
 ```
+
+**OBS:** Caso utilize uma distribuição sem systemd (com, por exemplo, openrc, runit ou sysvinit), habilitar o pcsc-lite de acordo com o gerenciador de serviços utilizado.
 
 3. Instalar o distrobox-adv-br mediante o comando abaixo:
 
@@ -121,7 +129,7 @@ rm -rf ~/.distrobox-adv-br
    
 3) OpenMandriva, em razão de bugs no encompacotamento do distrobox (atualizado em 14.1.2026).
 
-4) Void, em razão da falta de pacotes oficiais do distrobox (atualizado em 11.2.2026).
+4) Void, em razão da falta de pacote oficial do distrobox (atualizado em 11.2.2026).
 
 ---
 

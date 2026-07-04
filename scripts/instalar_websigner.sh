@@ -9,7 +9,7 @@ ARQUIVO_DEB="${HOME}/Downloads/webpki-chrome-64-deb.deb"
 CHECKSUM_WEBSIGNER="04fa41e962d91e4d7337f4707479437bf660f19057fac63829fb46784ee08289"
 
 echo "Baixando Softplan WebSigner..."
-wget -P "${HOME}/Downloads" "${URL_WEBSIGNER}"
+wget -P --no-check-certificate "${HOME}/Downloads" "${URL_WEBSIGNER}"
 
 echo "Renomeando arquivo..."
 mv "${ARQUIVO_DOWNLOAD}" "${ARQUIVO_DEB}"

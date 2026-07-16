@@ -14,7 +14,7 @@ Estão incluídos:
    
 5) Papers, utilizado para assinar documentos com certificado digital ou validar documentos já assinados;
    
-6) Lacuna Webpki e Softplan Websigner, utilizado para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
+6) Lacuna Webpki e Softplan Websigner, utilizados para assinatura eletrônica de documento em sistemas SAJ, fornecido pela Softplan;
    
 7) Certisign WebSigner, utilizado no portal de assinatura eletrônica da OAB;
 
@@ -85,9 +85,9 @@ wget -P ${HOME}/Downloads https://raw.githubusercontent.com/pedrohqb/distrobox-a
 
 ## Uso
 
-Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parenteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**. 
+Terminada a instalação, os aplicativos acima mencionados estarão disponíveis para acesso no menu ou equivalente de seu ambiente desktop devidamente identificados com o nome do projeto entre parênteses. Por exemplo: **Firefox-ESR (on distrobox-adv-br)**. 
 
-Os token SafeNet e Safesign já estão habilitados no Firefox; o certificado na nuvem SerproID é configurado automaticamente no Firefox após sua instalação na máquina. 
+Os tokens SafeNet e Safesign já estão habilitados no Firefox; o certificado na nuvem SerproID é configurado automaticamente no Firefox após sua instalação na máquina. 
 
 ---
 
@@ -118,18 +118,6 @@ distrobox rm distrobox-adv-br
 ```bash
 rm -rf ~/.distrobox-adv-br
 ```
-
----
-
-## Distribuições não suportadas
-
-1) openSUSE Leap 16.0, uma vez que esta oferece uma versão do pcsc-lite extremamente desatualizada (atualizado em 14.1.2026).
-   
-2) Solus, em razão de bugs no encompacotamento do distrobox (atualizado em 14.1.2026).
-   
-3) OpenMandriva, em razão de bugs no encompacotamento do distrobox (atualizado em 14.1.2026).
-
-4) Void, em razão da falta de pacote oficial do distrobox (atualizado em 11.2.2026).
 
 ---
 

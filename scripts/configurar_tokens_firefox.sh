@@ -9,6 +9,16 @@ NOME_SAFESIGN="SafeSign"
 CAMINHO_SAFENET="/usr/lib/libeToken.so"
 NOME_SAFENET="SafeNet"
 
+# --- Passo 0: Unificar ~/.mozilla e ~/.config/mozilla ---
+# A partir do Firefox 147 (ESR 153), perfis novos vão para ~/.config/mozilla,
+# salvo se ~/.mozilla já existir. Outros programas ainda procuram ~/.mozilla,
+# então ~/.mozilla vira um link para .config/mozilla antes da primeira execução.
+mkdir -p "$HOME/.config/mozilla"
+if [ ! -e "$HOME/.mozilla" ] && [ ! -L "$HOME/.mozilla" ]; then
+    ln -s .config/mozilla "$HOME/.mozilla"
+    echo "Link criado: ~/.mozilla -> .config/mozilla"
+fi
+
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
 echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-esr)..."
 firefox-esr --headless --new-tab about:blank &

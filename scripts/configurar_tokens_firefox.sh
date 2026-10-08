@@ -9,15 +9,29 @@ NOME_SAFESIGN="SafeSign"
 CAMINHO_SAFENET="/usr/lib/libeToken.so"
 NOME_SAFENET="SafeNet"
 
+# --- Passo 0: Unificar ~/.mozilla e ~/.config/mozilla ---
+# A partir do Firefox 147 (ESR 153), perfis novos vão para ~/.config/mozilla,
+# salvo se ~/.mozilla já existir. Outros programas ainda procuram ~/.mozilla,
+# então ~/.mozilla vira um link para .config/mozilla antes da primeira execução:
+# o Firefox usa ~/.mozilla e os dois caminhos levam ao mesmo lugar.
+mkdir -p "$HOME/.config/mozilla"
+if [ ! -e "$HOME/.mozilla" ] && [ ! -L "$HOME/.mozilla" ]; then
+    ln -s .config/mozilla "$HOME/.mozilla"
+    echo "Link criado: ~/.mozilla -> .config/mozilla"
+fi
+
 # --- Passo 1: Criar um novo perfil do Firefox pela linha de comando ---
 echo "Iniciando o Firefox em modo headless para criar um novo perfil (default-esr)..."
 firefox-esr --headless --new-tab about:blank &
+PID_FIREFOX=$!
 
 # Espera por 6 segundos para o Firefox criar os arquivos do perfil
 sleep 6
 
-# Mata todos os processos do Firefox para garantir que o navegador esteja fechado
-pkill -f firefox-esr
+# Encerra apenas o Firefox iniciado acima. Não usar "pkill -f": o distrobox
+# compartilha o espaço de PIDs com o host e o padrão pode atingir outros processos.
+kill "$PID_FIREFOX" 2>/dev/null
+wait "$PID_FIREFOX" 2>/dev/null
 echo "Processo do Firefox encerrado."
 echo "---"
 

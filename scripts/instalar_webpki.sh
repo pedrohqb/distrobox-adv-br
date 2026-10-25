@@ -2,35 +2,12 @@
 # Script de Instalação do Lacuna Web PKI
 
 # Variáveis - Lacuna Web PKI
-URL_LACUNA="https://get.webpkiplugin.com/Downloads/2.16.0/setup-deb-64"
+URL_LACUNA="https://get.webpkiplugin.com/Downloads/2.16.1/setup-deb-64"
 ARQUIVO_DOWNLOAD="${HOME}/Downloads/setup-deb-64"
 ARQUIVO_DEB="${HOME}/Downloads/setup-deb-64.deb"
 
 # SHA256 do arquivo DEB (Lacuna Web PKI)
-CHECKSUM_LACUNA="d98752344e050b7fb040df3fb224998ec466bbffb96ac5e96e1ce455adee0a49"
-
-# Variáveis - dependência libicu74
-URL_ICU="http://mirrors.kernel.org/ubuntu/pool/main/i/icu/libicu74_74.2-1ubuntu3_amd64.deb"
-ARQUIVO_ICU="${HOME}/Downloads/libicu74_74.2-1ubuntu3_amd64.deb"
-
-# SHA256 do arquivo DEB (libicu74)
-CHECKSUM_ICU="d29c97a21a3e3254731cfac186e4d4e611e5e67d2c9a0430f6acfbd9acaefa2e"
-
-echo "Baixando dependência libicu74..."
-wget -P "${HOME}/Downloads" "${URL_ICU}"
-
-echo "Verificando checksum do libicu74..."
-if ! echo "${CHECKSUM_ICU} ${ARQUIVO_ICU}" | sha256sum -c --status; then
-    echo "ERRO: Checksum SHA256 do libicu74 falhou!"
-    exit 1
-fi
-echo "Checksum verificado com sucesso."
-
-echo "Instalando dependência libicu74..."
-apt install -y "${ARQUIVO_ICU}"
-
-echo "Limpando arquivos do libicu74..."
-rm "${ARQUIVO_ICU}"
+CHECKSUM_LACUNA="a4ef76b1f0f5ff4489211b459d147ef0e2dea2ecad97d8f9ba2b0b283d3e3d85"
 
 echo "Baixando Lacuna Web PKI..."
 wget -P "${HOME}/Downloads" "${URL_LACUNA}"

@@ -24,6 +24,8 @@ Estão incluídos:
 
 ![Exemplo de aplicações funcionando](https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/screenshots/screenshot1.png)
 
+**Alternativa sem contêiner:** quem prefere usar os aplicativos em Flatpak (Firefox, Chromium, PJeOffice Pro, Papers, Okular, etc.) pode usar o [`Tessera`](https://github.com/pedrohqb/tessera), projeto irmão disponível no [`FlatPark`](https://flatpark.org/apps/io.github.pedrohqb.Tessera), que oferece os mesmos drivers (Safesign, SafeNet e SerproID) a esses aplicativos, sem necessidade de distrobox.
+
 ---
 
 ## Instalação

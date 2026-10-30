@@ -1,0 +1,55 @@
+name: Verificação semanal dos downloads
+
+# Toda segunda-feira, baixa cada arquivo fixado (drivers e programas dos
+# fornecedores) e confere o SHA256. Se algum mudou, sumiu ou não baixa, a
+# execução falha e abre (ou atualiza) uma issue que menciona o dono do
+# repositório, o que manda um e-mail. Quando tudo volta a conferir, a issue
+# é fechada sozinha. Nada é atualizado automaticamente.
+
+on:
+  schedule:
+    - cron: '17 9 * * 1'   # segundas, 06:17 em Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    name: Conferir os downloads fixados
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Baixar e conferir
+        id: check
+        run: |
+          set +e
+          python3 .github/scripts/check-downloads.py scripts scripts > report.md
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Abrir, atualizar ou fechar a issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STATUS: ${{ steps.check.outputs.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Downloads fixados com problema"
+          issue=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$STATUS" != 0 ]; then
+            {
+              echo "@${{ github.repository_owner }}, a verificação semanal encontrou problema:"
+              echo
+              cat report.md
+              echo
+              echo "Execução: $RUN_URL"
+            } > body.md
+            if [ -n "$issue" ]; then
+              gh issue comment "$issue" --body-file body.md
+            else
+              gh issue create --title "$title" --body-file body.md
+            fi
+            exit 1
+          elif [ -n "$issue" ]; then
+            gh issue close "$issue" --comment "Todos os downloads voltaram a conferir com o SHA256 fixado ($RUN_URL)."
+          fi

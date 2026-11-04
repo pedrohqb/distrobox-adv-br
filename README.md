@@ -24,7 +24,7 @@ Estão incluídos:
 
 ![Exemplo de aplicações funcionando](https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/screenshots/screenshot1.png)
 
-**Alternativa sem contêiner:** quem prefere usar os aplicativos em Flatpak (Firefox, Chromium, PJeOffice Pro, Papers, Okular, etc.) pode usar o [`Tessera`](https://github.com/pedrohqb/tessera), projeto irmão disponível no [`FlatPark`](https://flatpark.org/apps/io.github.pedrohqb.Tessera), que oferece os mesmos drivers (Safesign, SafeNet e SerproID) a esses aplicativos, sem necessidade de distrobox.
+**Alternativa sem contêiner:** quem prefere usar os aplicativos em Flatpak (Firefox, Chromium, PJeOffice Pro, Papers, Okular, etc.) pode usar o [`Tessera`](https://github.com/pedrohqb/tessera), projeto irmão disponível no [`FlatPark`](https://flatpark.org/apps/io.github.pedrohqb.Tessera), que oferece os mesmos drivers (Safesign, SafeNet e SerproID) a esses aplicativos, sem necessidade de distrobox. O Tessera depende de um p11-kit 0.25.6 ou mais novo no sistema: no Debian 12 e 13, no LMDE 6 e 7, no Ubuntu 24.04 e no Linux Mint 22, a assinatura não funciona por ele, e o caminho é este projeto (veja as [distribuições suportadas pelo Tessera](https://github.com/pedrohqb/tessera#distribui%C3%A7%C3%B5es)).
 
 ---
 

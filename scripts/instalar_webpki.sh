@@ -2,12 +2,12 @@
 # Script de Instalação do Lacuna Web PKI
 
 # Variáveis - Lacuna Web PKI
-URL_LACUNA="https://get.webpkiplugin.com/Downloads/2.16.1/setup-deb-64"
+URL_LACUNA="https://get.webpkiplugin.com/Downloads/2.17.0/setup-deb-64"
 ARQUIVO_DOWNLOAD="${HOME}/Downloads/setup-deb-64"
 ARQUIVO_DEB="${HOME}/Downloads/setup-deb-64.deb"
 
 # SHA256 do arquivo DEB (Lacuna Web PKI)
-CHECKSUM_LACUNA="a4ef76b1f0f5ff4489211b459d147ef0e2dea2ecad97d8f9ba2b0b283d3e3d85"
+CHECKSUM_LACUNA="cf284641bb3786dea6f3003fbcb5c0bf8b83cc9ab37975aa87ff68cdc42ac2f4"
 
 echo "Baixando Lacuna Web PKI..."
 wget -P "${HOME}/Downloads" "${URL_LACUNA}"

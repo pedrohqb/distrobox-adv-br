@@ -1,5 +1,11 @@
 # distrobox-adv-br
 
+> **Em modo de manutenção.** O distrobox-adv-br passa a receber só correções e será **arquivado no início de 2027**. O caminho recomendado agora é o [**Tessera**](https://github.com/pedrohqb/tessera), projeto irmão, sem contêiner: ele leva aos aplicativos em Flatpak e aos instalados pela distribuição tudo o que este contêiner oferece. São os drivers SafeSign (GD Burti), SafeNet e SerproID, com o OpenSC embutido, para PJeOffice Pro, Firefox, Chromium, Papers, Okular e outros. E também o Lacuna Web PKI e os WebSigner da Softplan e da Certisign, como extensões, nos navegadores em Flatpak.
+>
+> [![Get it on FlatPark](https://flatpark.org/badges/get-it-on-flatpark.svg)](https://flatpark.org/apps/io.github.pedrohqb.Tessera/)
+>
+> **Exceção:** o Tessera depende de um p11-kit 0.25.6 ou mais novo no sistema. No Debian 12 e 13, no LMDE 6 e 7, no Ubuntu 24.04 e no Linux Mint 22, a assinatura não funciona por ele, e este projeto continua sendo o caminho até o arquivamento (veja as [distribuições suportadas pelo Tessera](https://github.com/pedrohqb/tessera#distribui%C3%A7%C3%B5es)).
+
 Trata-se de arquivo assemble para criar contêiner via distrobox com pacotes que fornecem ambiente para uso de certificado digital por advogados no Brasil em distribuições populares e recentes de Linux. 
 
 Estão incluídos:
@@ -23,8 +29,6 @@ Estão incluídos:
 9) Chromium, utilizado para acessar sítios de internet, especialmente aqueles que demandam acesso ao token de certificado digital de modo direto, tais como Projudi e eproc.
 
 ![Exemplo de aplicações funcionando](https://raw.githubusercontent.com/pedrohqb/distrobox-adv-br/refs/heads/main/screenshots/screenshot1.png)
-
-**Alternativa sem contêiner:** quem prefere usar os aplicativos em Flatpak (Firefox, Chromium, PJeOffice Pro, Papers, Okular, etc.) pode usar o [`Tessera`](https://github.com/pedrohqb/tessera), projeto irmão disponível no [`FlatPark`](https://flatpark.org/apps/io.github.pedrohqb.Tessera), que oferece os mesmos drivers (Safesign, SafeNet e SerproID) a esses aplicativos, sem necessidade de distrobox. O Tessera depende de um p11-kit 0.25.6 ou mais novo no sistema: no Debian 12 e 13, no LMDE 6 e 7, no Ubuntu 24.04 e no Linux Mint 22, a assinatura não funciona por ele, e o caminho é este projeto (veja as [distribuições suportadas pelo Tessera](https://github.com/pedrohqb/tessera#distribui%C3%A7%C3%B5es)).
 
 ---
 
